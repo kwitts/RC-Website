@@ -195,7 +195,7 @@ nav a:hover {
 
 .menu {
 	display: block;
-    margin-top: 25px;
+    margin-top: 5px;
 	border-radius: 50%;
 	width: 50px;
 	height: 50px;
@@ -271,31 +271,47 @@ nav ul {
 	width: 200px;
 }
 .bx-viewport {
-	height: 150px !important;
+	height: auto !important;
+	text-align:center;
 }
 .bx-thumbnail {
-	float: left;
-	margin-right: 3%;
-	height: 150px;
+	width: 100%;
+}
+.bx-thumbnail img {
+	margin: 0 auto 20px;
 }
 .bx-context {
-	font-size:1.5em;
+	font-size: 1.5em;
+	color: #0067A3;
 }
-#whyimplement ul.list {
+#whyimplement .implement-footer header { 
+	display: table;
+	height: 100%;
+}
+#whyimplement .implement-footer header h3 {
+	font-weight: bold;
+	text-align: center;
+	display: table-cell;
+    vertical-align: middle;
+	padding-bottom: 15px;
+}
+#whyimplement .implement-footer ul {
 	text-align: left;
 	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-size: 1.2em;
 }
-#whyimplement ul.list li {
-	padding-left: 1em; 
-    text-indent: -.7em;
+#whyimplement .implement-footer ul li {
+	padding: .2em 0; 
 }
-#whyimplement ul.list li:before {
+#whyimplement .implement-footer ul li:before {
 	content: "";
     line-height: 1em;
     width: .7em;
     height: .7em;
     float: left;
-    margin: .4em 1em 0;
+    margin: .4em .6em 0 0;
     border-radius: 50%;
 	background: #FC7C63;
 }
@@ -369,6 +385,23 @@ nav ul {
 		float: left;
 		margin-right: 3%;
 		height: 100px;
+	}
+	.bx-viewport {
+		height: 150px !important;
+	}
+	.bx-thumbnail {
+		float: left;
+		margin-right: 3%;
+		height: 150px;
+		width: auto;
+	}
+	.bx-context {
+		font-size:1.5em;
+	}
+	
+	#whyimplement .implement-footer header h3 {
+		text-align: left;
+		padding: 45px 0;
 	}
 }
 

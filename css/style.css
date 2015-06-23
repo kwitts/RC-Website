@@ -26,6 +26,29 @@ hr {
     padding: 0;
 }
 
+h1,
+h2,
+h3 {
+	color: #0097B8;
+	font: 'Open Sans', Helvetica, Arial, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+h2,
+h3 {
+	font-weight: 300;
+	line-height: 1.2em;
+}
+h1 {
+	font-size: 3em;
+}
+h2 {
+	font-size: 2em;
+}
+h3 {
+	font-size: 1.5em;
+}
+
 audio,
 canvas,
 iframe,
@@ -58,7 +81,7 @@ textarea {
    ========================================================================== */
 
 body {
-    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+    font: 16px/26px 'Open Sans', Helvetica, Helvetica Neue, Arial;
 }
 
 .wrapper {
@@ -198,6 +221,7 @@ nav ul {
 
 .main-container {
 	border-bottom: #C5C5C5 1px solid;
+	padding: 5% 0;
 }
 
 .button {
@@ -226,6 +250,10 @@ nav ul {
 	box-sizing: border-box;
 	color: #ECEDEF;
 }
+#top h1 {
+	color: white;
+	font-weight: bold;
+}
 #top footer {
 	clear: both;
 	padding:5% 0;
@@ -242,14 +270,35 @@ nav ul {
 #clients section img {
 	width: 200px;
 }
-
+.bx-viewport {
+	height: 150px !important;
+}
 .bx-thumbnail {
 	float: left;
+	margin-right: 3%;
+	height: 150px;
 }
 .bx-context {
 	font-size:1.5em;
 }
-
+#whyimplement ul.list {
+	text-align: left;
+	list-style: none;
+}
+#whyimplement ul.list li {
+	padding-left: 1em; 
+    text-indent: -.7em;
+}
+#whyimplement ul.list li:before {
+	content: "";
+    line-height: 1em;
+    width: .7em;
+    height: .7em;
+    float: left;
+    margin: .4em 1em 0;
+    border-radius: 50%;
+	background: #FC7C63;
+}
 	
 
 /* ==========================================================================
@@ -290,6 +339,11 @@ nav ul {
     .oldie nav a {
         margin: 0 0.7%;
     }
+	.half {
+		width: 47.5%;
+		margin-right: 5%;
+		float:left;
+	}
 	.third {
 		width: 30%;
 		margin-right: 5%;
@@ -306,8 +360,16 @@ nav ul {
 	}
 	
 	#clients section img {
-	width: 100px;
-}
+		width: 100px;
+	}
+	.bx-viewport {
+		height: 100px !important;
+	}
+	.bx-thumbnail {
+		float: left;
+		margin-right: 3%;
+		height: 100px;
+	}
 }
 
 @media only screen and (min-width: 768px) {
@@ -337,7 +399,11 @@ nav ul {
     WIDE: Main
    ============ */
 
-    .main article {
+    .main-container{
+		padding: 3% 0;
+	}
+	
+	.main article {
         float: left;
         width: 100%;
     }

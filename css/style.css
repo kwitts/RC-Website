@@ -1,0 +1,511 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+	height: 100%;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body {
+    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+
+/* ===================
+    ALL: Theme
+   =================== */
+
+.header-container {
+    /*border-bottom: 20px solid #0097B8;*/
+	position: fixed;
+	top: 0;
+	width:100%;
+}
+
+.footer-container,
+.main aside {
+    border-top: 20px solid #0097B8;
+}
+
+.header-container,
+.main aside {
+    background: #ECEDEF;
+}
+
+.title,
+.title img {
+	width: 200px;
+    color: white;
+	float:left;
+}
+
+article {
+	text-align: center;
+}
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+nav { 
+	width: 100%;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+	background: #3C4A60;
+	font-size:.8em;
+	width: 100%;
+}
+
+nav a {
+    display: block;
+    padding: 10px 0;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: light;
+	text-transform: uppercase;
+
+    color: white;
+    background: #3C4A60;
+}
+
+nav a:hover,
+nav a:visited {
+    color: white;
+}
+
+nav a:hover {
+    background: #182029;
+}
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+.main {
+    padding: 0;
+}
+
+.main article h1 {
+    font-size: 2em;
+}
+
+.main aside {
+    color: #222;
+    padding: 0px 5% 10px;
+}
+
+.footer-container footer {
+    color: white;
+    padding: 20px 0;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   custom styles
+   ========================================================================== */
+
+.menu {
+	display: block;
+    margin-top: 25px;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+
+    color: white;
+    background: #3C4A60;
+	float: right;
+}
+nav ul {
+	display: none;
+	background: #3C4A60;
+	clear:both;
+}
+
+.footer-container {
+	background: #182029;
+}
+
+.main-container {
+	border-bottom: #C5C5C5 1px solid;
+}
+
+.button {
+	display: block;
+	width: 300px;
+	padding-left: 10px;
+	background: #F6936F;
+	color: white;
+	text-decoration: none;
+	text-align: left;
+	font-size: 1.2em;
+	overflow:hidden;
+	line-height: 56px;
+}
+.r-icon img {
+	float: right;
+}
+
+/* ==========================================================================
+   SECTIONS
+   ========================================================================== */
+
+#top {
+	background: url('../images/topbg.jpg') center center no-repeat;
+	padding-top: 110px;
+	box-sizing: border-box;
+	color: #ECEDEF;
+}
+#top footer {
+	clear: both;
+	padding:5% 0;
+	text-align: center;
+	overflow: hidden;
+}
+#top footer .icon-button {
+	display: none;
+}
+#top .button {
+	margin: 3% auto 0;
+}
+
+#clients section img {
+	width: 200px;
+}
+
+.bx-thumbnail {
+	float: left;
+}
+.bx-context {
+	font-size:1.5em;
+}
+
+	
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+    nav a {
+        float: left;
+        width: 29.3%;
+        margin: 0;
+        padding: 15px 2%;
+        margin-bottom: 0;
+		font-size: .75em;
+    }
+
+    nav li:first-child a {
+        margin-left: 0;
+    }
+
+    nav li:last-child a {
+        margin-right: 0;
+    }
+
+/* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+    nav ul li {
+        display: block;
+    }
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+	.third {
+		width: 30%;
+		margin-right: 5%;
+		float:left;
+	}
+	.fourth {
+		width: 21%;
+		margin-right: 5%;
+		float:left;
+	}
+
+	.last {
+		margin-right: 0;
+	}
+	
+	#clients section img {
+	width: 100px;
+}
+}
+
+@media only screen and (min-width: 768px) {
+
+/* ============
+    WIDE: Menu
+   ============ */
+
+    .title {
+        float: left;
+	}
+	.title img {
+		width: 250px;
+    }
+
+    nav {
+        float: right;
+		clear: both;
+        width: 100%;
+    }
+	
+	nav a {
+        font-size: 1em;
+	}
+
+/* ============
+    WIDE: Main
+   ============ */
+
+    .main article {
+        float: left;
+        width: 100%;
+    }
+
+    .main aside {
+        float: right;
+        width: 28%;
+    }
+	
+	.button {
+		width: 280px;
+	}
+	
+	#top {
+		min-height: 100vh;
+		font-size: 1.3em;
+	}
+	#top h1{
+		font-size: 3em;
+		line-height: 1em;
+		padding: 5% 0;
+	}
+	#top footer {
+		padding: 10% 0 5%;
+	}
+	#top footer .icon-button {
+		display: inline-block;
+	}	
+	#top .button {
+		margin: 0;
+	}
+	
+	#clients section img {
+	width: 200px;
+}
+	
+	
+	.floatl {
+		float: left;
+	}
+	.floatr {
+		float: right;
+	}
+	
+}
+
+@media only screen and (min-width: 1140px) {
+
+/* ===============
+    Maximal Width
+   =============== */
+
+    .wrapper {
+        width: 1026px; /* 1140px - 10% for margins */
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

@@ -7,8 +7,8 @@ $('.testimonials-slider').bxSlider({
 	auto: true
 });
 
-$('.slideout').click(function() {
-	$(this).toggleClass('showslide');
-	$(this).children('.content').fadeToggle('fast');
-	$(this).prev().fadeToggle('fast');
+$('.slideout img').click(function() {
+	$(this).parent().toggleClass('showslide');
+	$(this).parent().children('.content').fadeToggle('fast');
+	$(this).parent().prev().fadeToggle('fast');
 });

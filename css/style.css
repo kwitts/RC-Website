@@ -142,15 +142,14 @@ article header {
 
 nav { 
 	width: 100%;
-	background: #3C4A60;
 }
 nav ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
-	background: #3C4A60;
 	font-size:.8em;
 	width: 100%;
+	display: none;
 }
 
 nav a {
@@ -173,6 +172,15 @@ nav a:visited {
 
 nav a:hover {
     background: #182029;
+}
+nav a.menu-request {
+	font-weight: 700;
+	color: #fff;
+	background: #F77C63;
+}
+nav a.menu-request:hover {
+	color: #fff;
+	background: #B85D4A;
 }
 
 /* ==============
@@ -222,7 +230,6 @@ nav a:hover {
 	float: right;
 }
 nav ul {
-	display: none;
 	background: #3C4A60;
 	clear:both;
 }
@@ -233,7 +240,7 @@ nav ul {
 
 .main-container {
 	border-bottom: #C5C5C5 1px solid;
-	padding: 5% 0;
+	padding: 20px 0;
 }
 
 .dark {
@@ -291,9 +298,15 @@ input{
 .page-title.home {
 	background: url('../images/topbg.jpg') center center no-repeat;
 }
+.page-title.home h1{
+	font-size: 1.3em;
+}
+.page-title.home section {
+	text-align: center;
+}
 .page-title footer {
 	clear: both;
-	padding:5% 0;
+	padding: 3% 0;
 	text-align: center;
 	overflow: hidden;
 }
@@ -431,7 +444,7 @@ input{
 
     nav a {
         float: left;
-        width: 29.3%;
+        width: 21%;
         margin: 0;
         padding: 15px 2%;
         margin-bottom: 0;
@@ -509,6 +522,7 @@ input{
 	nav a {
         font-size: 1em;
 	}
+	
 
 /* ============
     WIDE: Main
@@ -518,8 +532,9 @@ input{
 		width: 90%;
 		margin: 0 5%;
 	}
-	.main-container{
-		padding: 3% 0;
+	.header-container .wrapper {
+		width: 100%;
+		margin: 0;
 	}
 	
 	.main article {
@@ -543,16 +558,12 @@ input{
 	}
 	
 	.page-title {
-		min-height: 100vh;
 		font-size: 1.3em;
 	}
-	.page-title h1{
-		font-size: 3em;
+	.page-title.home h1{
+		font-size: 2.5em;
 		line-height: 1em;
-		padding: 5% 0;
-	}
-	.page-title footer {
-		padding: 10% 0 5%;
+		padding: 3% 0;
 	}
 	.page-title footer .icon-button {
 		display: inline-block;
@@ -653,6 +664,46 @@ input{
         width: 1026px; /* 1140px - 10% for margins */
         margin: 0 auto;
     }
+	.menu {
+		display: none;
+	}
+	nav {
+		width: auto;
+		clear: none;
+		padding: 30px 10px 0;
+	}
+	nav ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		background: #ECEDEF;
+		font-size:.8em;
+		display: block;
+	}
+	nav ul li{
+		display: inline-block;
+	}
+
+	 nav ul li a {
+		display: block;
+		padding: 10px 30px;
+		width: auto;
+		text-align: center;
+		text-decoration: none;
+		font-weight: light;
+		text-transform: uppercase;
+
+		color: #222;
+		background: #ECEDEF;
+	}
+
+	nav a:hover {
+		color: #0079C1;
+		background: #ECEDEF;
+	}
+	.main-container {
+		padding: auto 0;
+	}
 }
 
 /* ==========================================================================

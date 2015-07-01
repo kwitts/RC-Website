@@ -1,5 +1,6 @@
 $('.menu').click(function (e) {
 	$('nav ul').slideToggle('fast');
+	$('.menu i').toggleClass('fa-navicon fa-times');
 	e.preventDefault();
 });
 

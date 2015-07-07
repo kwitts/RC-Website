@@ -63,6 +63,9 @@ h3 {
 .black-text {
 	color: #222;
 }
+.center-text {
+	text-align: center;
+}
 
 audio,
 canvas,
@@ -294,7 +297,7 @@ input{
 .page-title.home {
 	background: url('../images/topbg.jpg') center center no-repeat;
 }
-.page-title.home h1{
+.page-title h1{
 	font-size: 1.3em;
 }
 .page-title.home section {
@@ -470,7 +473,7 @@ input{
 	width: 100%;
 	height: 160px;
 	padding: 10px 10px;
-	margin-right: -85px;
+	margin-right: -100px;
 	-webkit-transition: margin-right 1s, right 1s;
 	transition: margin-right 1s, right 1s;
 	box-sizing: border-box;
@@ -531,7 +534,8 @@ input{
 	
 /*How it Works*/
 .page-title.howitworks {
-	background: #E9E9Ea;
+	/*background: #E9E9Ea;*/
+	background: #2b3849;
 }
 .page-title.howitworks section {
 	text-align: center !important;
@@ -541,19 +545,55 @@ input{
 	max-width: 800px;
 }
 
+/*Analytics*/
+.page-title.analytics {
+	/*background: #E9E9Ea;*/
+	background: #2b3849;
+}
+
 .venn {
 	text-align: center !important;
 	position: relative;
-	/*height: 380px;*/
-	width: 100%;
-	margin: 0 auto 30px;
-}
-.venn .circle {
-	display: none;
-}
-.venn .middle {
 	width: 100%;
 	max-width: 500px;
+	height: auto;
+	margin: 0 auto 30px;
+	overflow: hidden;
+}
+.venn img {
+	max-width: 100%;
+}
+.venn .section {
+	position: absolute;
+}
+.venn .base {
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+.venn .owned {
+	width: 50%;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+.venn .paid {
+	width: 50%;
+	top: 0;
+	left: 50%;
+	cursor: pointer;
+}
+.venn .earned {
+	width: 100%;
+	top: 60%;
+	left: 0;
+	cursor: pointer;
+}
+.venn .center {
+	width: 48%;
+	top: 26%;
+	left: 26%;
+	cursor: pointer;
 }
 /*.venn .circle {
 	position: absolute;
@@ -671,6 +711,10 @@ input{
 		background: url(../images/requestbg.png) no-repeat left center;
 	}
 	
+	/*.venn {
+		width: 408px;
+	}*/
+	
 	
 }
 
@@ -723,6 +767,9 @@ input{
         float: right;
         width: 28%;
     }
+	.row {
+		clear: both;
+	}
 	.half {
 		width: 47.5%;
 		margin-right: 5%;
@@ -796,10 +843,6 @@ input{
 	#marketers article section .slideout .content h4 {
 		display: block;
 	}
-	
-	/*.venn {
-		width: 500px;
-	}*/
 	
 	.floatl {
 		float: left;

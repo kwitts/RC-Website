@@ -47,13 +47,11 @@
             });
         }
     });
-    
-    // kick the event to pick up any elements already in view.
-    // note however, this only works if the plugin is included after the elements are bound to 'inview'
     $(function () {
         $(window).scroll();
     });
 })(jQuery);
+
 $('.menu').click(function (e) {
 	$('nav ul').slideToggle('fast');
 	$('.menu i').toggleClass('fa-navicon fa-times');
@@ -84,11 +82,43 @@ $('.bars').bind('inview', function (event, visible) {
         // element has gone out of viewport
     }
 });
-$('.venn').bind('inview', function (event, visible) {
-    if (visible == true) {
-		  $(".venn .circle").addClass('start');
-		  $(".venn .middle").addClass('start');
-    } else {
-        // element has gone out of viewport
-    }
+
+$(function() {
+    $('.owned').hover(function () {
+        $(this).attr('src', 'images/hover_01.png');
+    }, function() {
+        $(this).attr('src', 'images/venn_01.png');
+    });
+	$('.paid').hover(function () {
+        $(this).attr('src', 'images/hover_02.png');
+    }, function() {
+        $(this).attr('src', 'images/venn_02.png');
+    });
+	$('.earned').hover(function () {
+        $(this).attr('src', 'images/hover_03.png');
+    }, function() {
+        $(this).attr('src', 'images/venn_03.png');
+    });
 });
+$('.owned').click(function () {
+	$('.center').attr('src', 'images/venncenter_01.png');
+	 $(this).attr('src', 'images/hover_01.png');
+});
+$('.paid').click(function () {
+	$('.center').attr('src', 'images/venncenter_02.png');
+	 $(this).attr('src', 'images/hover_02.png');
+});
+$('.earned').click(function () {
+	$('.center').attr('src', 'images/venncenter_03.png');
+	 $(this).attr('src', 'images/hover_03.png');
+});
+$('.center').click(function () {
+		$(this).attr('src', 'images/venncenter.png');
+});
+
+	
+	
+	
+	
+	
+	

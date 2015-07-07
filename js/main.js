@@ -84,3 +84,11 @@ $('.bars').bind('inview', function (event, visible) {
         // element has gone out of viewport
     }
 });
+$('.venn').bind('inview', function (event, visible) {
+    if (visible == true) {
+		  $(".venn .circle").addClass('start');
+		  $(".venn .middle").addClass('start');
+    } else {
+        // element has gone out of viewport
+    }
+});

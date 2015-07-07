@@ -300,6 +300,7 @@ input{
 .page-title.home section {
 	text-align: center;
 }
+
 .page-title footer {
 	clear: both;
 	padding: 3% 0;
@@ -508,10 +509,108 @@ input{
 	cursor: pointer;
 }
 	
-/*Enterprise Ready*/
-.features header {
+/*Features*/
+.page-title.features {
+	background: #2B3849;
+}
+.page-title.features header {
 	margin: 0 auto;
 }
+.page-title.features .path {
+	background: #E9E9Ea;
+	text-align: center;
+}
+.page-title.features .path img {
+	width: 100%;
+	max-width: 800px;
+}
+.featurelist section {
+	text-align: center !important;
+}
+
+	
+/*How it Works*/
+.page-title.howitworks {
+	background: #E9E9Ea;
+}
+.page-title.howitworks section {
+	text-align: center !important;
+}
+.page-title.howitworks section img {
+	width: 100%;
+	max-width: 800px;
+}
+
+.venn {
+	text-align: center !important;
+	position: relative;
+	/*height: 380px;*/
+	width: 100%;
+	margin: 0 auto 30px;
+}
+.venn .circle {
+	display: none;
+}
+.venn .middle {
+	width: 100%;
+	max-width: 500px;
+}
+/*.venn .circle {
+	position: absolute;
+	top: 125px;
+	left: 150px;
+}
+.venn .middle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	opacity: 0;
+}*/
+
+/*.venn .circle.top.start {
+	animation: venn-top 1s ease-in forwards;
+}
+.venn .circle.left.start {
+	animation: venn-left 1s ease-in forwards;
+}
+.venn .circle.right.start {
+	animation: venn-right 1s ease-in forwards;
+}
+.venn .middle.start {
+	animation: venn-middle .5s ease-in forwards;
+	animation-delay: 1s;
+}
+@-webkit-keyframes venn-top {
+		from { top: 0; opacity: 1; }
+		to   { top: 125px; opacity: 0; }
+	}
+@keyframes venn-top {
+		from { top: 0; opacity: 1; }
+		to   { top: 125px; opacity: 0; }
+	}
+@-webkit-keyframes venn-left {
+		from { top: 250px; left: 0; opacity: 1; }
+		to   { top: 125px; left: 150px; opacity: 0; }
+	}
+@keyframes venn-left {
+		from { top: 250px; left: 0; opacity: 1; }
+		to   { top: 125px; left: 150px; opacity: 0; }
+	}
+@-webkit-keyframes venn-right {
+		from { top: 250px; left: 300px; opacity: 1; }
+		to   { top: 125px; left: 150px; opacity: 0; }
+	}
+@keyframes venn-right {
+		from { top: 250px; left: 300px; opacity: 1; }
+		to   { top: 125px; left: 150px; opacity: 0; }
+	}
+@keyframes venn-middle {
+	from { opacity: 0; }
+	to   { opacity: 1; }
+}*/
+
+
 
 /*Insights & Analytics*/
 
@@ -627,16 +726,25 @@ input{
 	.half {
 		width: 47.5%;
 		margin-right: 5%;
+		margin-bottom: 30px;
 		float:left;
 	}
 	.third {
 		width: 30%;
 		margin-right: 5%;
+		margin-bottom: 30px;
+		float:left;
+	}
+	.twothird {
+		width: 60%;
+		margin-right: 5%;
+		margin-bottom: 30px;
 		float:left;
 	}
 	.fourth {
 		width: 21%;
 		margin-right: 5%;
+		margin-bottom: 30px;
 		float:left;
 	}
 
@@ -654,7 +762,7 @@ input{
 	.page-title {
 		font-size: 1.3em;
 	}
-	.page-title.home h1{
+	.page-title h1{
 		font-size: 2.5em;
 		line-height: 1em;
 		padding: 3% 0;
@@ -689,61 +797,18 @@ input{
 		display: block;
 	}
 	
-	
-	#enterprise .spinner {
-		width: 350px;
-		height: 450px;
-	}
-	#enterprise .middle {
-		width: 250px;
-		top: 100px;
-		left: 50px;
-	}
-	#enterprise .spin {
-		width: 150px;
-		top: 150px;
-		left: 100px;
-	}
-	#enterprise .spin.one{
-		-webkit-transform: translateX(110px);
-				transform: translateX(110px);
-		animation-delay: 0s;
-	}
-	#enterprise .spin.two{
-		-webkit-transform: translateX(110px);
-				transform: translateX(110px);
-		animation-delay: 4s;
-	}
-	#enterprise .spin.three{
-		-webkit-transform: translateX(110px);
-				transform: translateX(110px);
-		animation-delay: 8s;
-	}
-	@-webkit-keyframes orbit {
-		from { -webkit-transform: rotate(0deg) translateX(110px) rotate(0deg); }
-		to   { -webkit-transform: rotate(360deg) translateX(110px) rotate(-360deg); }
-	}
-
-	@-moz-keyframes orbit {
-		from { -moz-transform: rotate(0deg) translateX(110px) rotate(0deg); }
-		to   { -moz-transform: rotate(360deg) translateX(110px) rotate(-360deg); }
-	}
-
-	@-o-keyframes orbit {
-		from { -o-transform: rotate(0deg) translateX(110px) rotate(0deg); }
-		to   { -o-transform: rotate(360deg) translateX(110px) rotate(-360deg); }
-	}
-
-	@keyframes orbit {
-		from { transform: rotate(0deg) translateX(110px) rotate(0deg); }
-		to   { transform: rotate(360deg) translateX(110px) rotate(-360deg); }
-	}
+	/*.venn {
+		width: 500px;
+	}*/
 	
 	.floatl {
 		float: left;
 	}
 	.floatr {
 		float: right;
+	}
+	.nofloat {
+		clear: both;
 	}
 	
 }

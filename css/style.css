@@ -69,6 +69,9 @@ h3 {
 .center-text {
 	text-align: center;
 }
+.center-margin {
+	margin: 0 auto;
+}
 
 audio,
 canvas,
@@ -258,7 +261,7 @@ nav ul {
 	background: #F6936F;
 	color: white;
 	text-decoration: none;
-	text-align: left;
+	text-align: center;
 	font-size: 1.2em;
 	overflow:hidden;
 	line-height: 56px;
@@ -273,6 +276,9 @@ input{
 	padding: 5px;
 	text-align: center;
 	box-sizing: border-box;
+}
+.r-icon {
+	text-align: left;
 }
 .r-icon img {
 	float: right;
@@ -303,7 +309,7 @@ input{
 .page-title.home {
 	background: url('../images/topbg.jpg') center center no-repeat;
 }
-.page-title h1{
+.page-title.home h1{
 	font-size: 1.3em;
 }
 .page-title.home section {
@@ -444,6 +450,15 @@ input{
 	margin-top: -10px;
 }
 
+.referralmachine {
+	background: #2B3849;
+	color: #E9E9EA;
+}
+.referralmachine p {
+	font-size: 1.5em;
+	font-weight: 700;
+}
+
 /*Mike Makes a Purchase*/
 
 /*How Do Marketers...*/
@@ -517,7 +532,8 @@ input{
 	width: 90px;
 	cursor: pointer;
 }
-	
+
+
 /*Features*/
 .page-title.features {
 	background: #2B3849;
@@ -606,6 +622,9 @@ input{
 	background: #2b3849;
 	padding-bottom: 0;
 }
+.page-title.analytics h1 {
+	font-size: 1.9em;
+}
 .page-title.analytics section {
 	margin-bottom: 0;
 	position: relative;
@@ -614,6 +633,9 @@ input{
 	display: block;
 	width: 100%;
 	height: 16.666%;
+}
+.page-title.analytics .insights img {
+	width: 100%;
 }
 .page-title.analytics .insightsinfo {
 	background: #E9E9EA;
@@ -629,7 +651,7 @@ input{
 	display: block;
 }
 .page-title.analytics .insightsinfo img {
-	width: 150px;
+	width: 100px;
 }
 .page-title.analytics .insightsinfo h3 {
 	padding: 10px 0 0;
@@ -637,6 +659,10 @@ input{
 .page-title.analytics .insightsinfo p {
 	font-size: .9em;
 	margin: 5px 0;
+}
+
+.casestudy img {
+	width: 100%;
 }
 	
 
@@ -697,9 +723,9 @@ input{
 		background: url(../images/requestbg.png) no-repeat left center;
 	}
 	
-	/*.venn {
-		width: 408px;
-	}*/
+	.page-title.analytics .insights img {
+		width: auto;
+	}
 	
 	
 }
@@ -795,7 +821,8 @@ input{
 	.page-title {
 		font-size: 1.3em;
 	}
-	.page-title h1{
+	.page-title h1,
+	.page-title.home h1{
 		font-size: 2.5em;
 		line-height: 1em;
 		padding: 3% 0;
@@ -829,6 +856,8 @@ input{
 	#marketers article section .slideout .content h4 {
 		display: block;
 	}
+	
+	
 	
 	.floatl {
 		float: left;
@@ -891,6 +920,10 @@ input{
 	}
 	.main-container {
 		padding: auto 0;
+	}
+	
+	.page-title.analytics h1 {
+		font-size: 2.5em;
 	}
 }
 

@@ -112,11 +112,26 @@ $('.earned').click(function () {
 	 $(this).attr('src', 'images/hover_03.png');
 });
 $('.center').click(function () {
-		$(this).attr('src', 'images/venncenter.png');
+	$(this).attr('src', 'images/venncenter.png');
 });
 
+$('.insights a').click(function (e) {
+	$(this).siblings().removeClass('active');
+	$(this).addClass('active');
 	
-	
+	$('.insights a').each(function () {
+		var current = $(this).attr('data-default');
+		var hover = $(this).attr('data-hover');
+		
+		if ($(this).hasClass('active')) {
+			$(this).find('img').attr('src', '../images/' + hover + '.png');
+		} else {
+			$(this).find('img').attr('src', '../images/' + current + '.png');
+		}
+	});
+	e.preventDefault();
+});
+
 	
 	
 	

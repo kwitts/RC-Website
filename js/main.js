@@ -83,36 +83,19 @@ $('.bars').bind('inview', function (event, visible) {
     }
 });
 
-
-$('.owned').hover(function () {
-	$(this).attr('src', 'images/hover_01.png');
-}, function() {
-	$(this).attr('src', 'images/venn_01.png');
+$('.venn a').click(function (e) {
+	var vennsec = $(this).attr('class');
+	var diagram = $('.diagram');
+	$(this).siblings('a').hide();
+	
+	diagram.attr('src', 'images/' + vennsec + '.png');
+	diagram.addClass('active');
+	e.preventDefault();
 });
-$('.paid').hover(function () {
-	$(this).attr('src', 'images/hover_02.png');
-}, function() {
-	$(this).attr('src', 'images/venn_02.png');
-});
-$('.earned').hover(function () {
-	$(this).attr('src', 'images/hover_03.png');
-}, function() {
-	$(this).attr('src', 'images/venn_03.png');
-});
-$('.owned').click(function () {
-	$('.center').attr('src', 'images/venncenter_01.png');
-	 $(this).attr('src', 'images/hover_01.png');
-});
-$('.paid').click(function () {
-	$('.center').attr('src', 'images/venncenter_02.png');
-	 $(this).attr('src', 'images/hover_02.png');
-});
-$('.earned').click(function () {
-	$('.center').attr('src', 'images/venncenter_03.png');
-	 $(this).attr('src', 'images/hover_03.png');
-});
-$('.center').click(function () {
-	$(this).attr('src', 'images/venncenter.png');
+$('.venn .diagram').click(function () {
+	$(this).siblings('a').show();
+	$(this).removeClass('active');
+	$(this).attr('src', 'images/venn_all.png');
 });
 
 $('.insights a').click(function (e) {

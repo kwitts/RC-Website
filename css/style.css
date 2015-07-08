@@ -581,7 +581,29 @@ input{
 .venn img {
 	max-width: 100%;
 }
-.venn .section {
+.venn a {
+	display: block;
+	position: absolute;
+	width: 26%;
+	height: 26%;
+	border-radius: 50%;
+}
+.venn a:hover {
+	background: url(../images/venn_hover.png) no-repeat center center;
+}
+.venn .venn_owned {
+	top: 29%;
+	left: 14.4%;
+}
+.venn .venn_paid {
+	top: 29%;
+	left: 58.8%;
+}
+.venn .venn_earned {
+	top: 67%;
+	left: 36.6%;
+}
+/*.venn .section {
 	position: absolute;
 }
 .venn .base {
@@ -612,7 +634,9 @@ input{
 	top: 26%;
 	left: 26%;
 	cursor: pointer;
-}
+}*/
+
+
 
 
 

@@ -57,6 +57,9 @@ h3 {
 .blue-text {
 	color: #0079C1;
 }
+.dkblue-text {
+	color: #2B3849;
+}
 .green-text {
 	color: #20B7AC;
 }
@@ -548,22 +551,8 @@ input{
 	max-width: 800px;
 }
 
-/*Analytics*/
-.page-title.analytics {
-	/*background: #E9E9Ea;*/
-	background: #2b3849;
-	padding-bottom: 0;
-}
-.page-title.analytics section {
-	margin-bottom: 0;
-	position: relative;
-}
-.page-title.analytics a {
-	display: block;
-	width: 100%;
-	height: 16.666%;
-}
 
+/*Venn Diagram*/
 .venn {
 	text-align: center !important;
 	position: relative;
@@ -608,64 +597,48 @@ input{
 	left: 26%;
 	cursor: pointer;
 }
-/*.venn .circle {
-	position: absolute;
-	top: 125px;
-	left: 150px;
+
+
+
+/*Insights & Analytics Page*/
+.page-title.analytics {
+	/*background: #E9E9Ea;*/
+	background: #2b3849;
+	padding-bottom: 0;
 }
-.venn .middle {
-	position: absolute;
-	top: 0;
-	left: 0;
+.page-title.analytics section {
+	margin-bottom: 0;
+	position: relative;
+}
+.page-title.analytics a {
+	display: block;
 	width: 100%;
-	opacity: 0;
-}*/
-
-/*.venn .circle.top.start {
-	animation: venn-top 1s ease-in forwards;
+	height: 16.666%;
 }
-.venn .circle.left.start {
-	animation: venn-left 1s ease-in forwards;
+.page-title.analytics .insightsinfo {
+	background: #E9E9EA;
+	padding: 10px;
+	-webkit-border-radius: 10px;
+			border-radius: 10px;
+	margin-top: 15px;
 }
-.venn .circle.right.start {
-	animation: venn-right 1s ease-in forwards;
+.page-title.analytics .insightsinfo div {
+	display: none;
 }
-.venn .middle.start {
-	animation: venn-middle .5s ease-in forwards;
-	animation-delay: 1s;
+.page-title.analytics .insightsinfo div.active {
+	display: block;
 }
-@-webkit-keyframes venn-top {
-		from { top: 0; opacity: 1; }
-		to   { top: 125px; opacity: 0; }
-	}
-@keyframes venn-top {
-		from { top: 0; opacity: 1; }
-		to   { top: 125px; opacity: 0; }
-	}
-@-webkit-keyframes venn-left {
-		from { top: 250px; left: 0; opacity: 1; }
-		to   { top: 125px; left: 150px; opacity: 0; }
-	}
-@keyframes venn-left {
-		from { top: 250px; left: 0; opacity: 1; }
-		to   { top: 125px; left: 150px; opacity: 0; }
-	}
-@-webkit-keyframes venn-right {
-		from { top: 250px; left: 300px; opacity: 1; }
-		to   { top: 125px; left: 150px; opacity: 0; }
-	}
-@keyframes venn-right {
-		from { top: 250px; left: 300px; opacity: 1; }
-		to   { top: 125px; left: 150px; opacity: 0; }
-	}
-@keyframes venn-middle {
-	from { opacity: 0; }
-	to   { opacity: 1; }
-}*/
-
-
-
-/*Insights & Analytics*/
+.page-title.analytics .insightsinfo img {
+	width: 150px;
+}
+.page-title.analytics .insightsinfo h3 {
+	padding: 10px 0 0;
+}
+.page-title.analytics .insightsinfo p {
+	font-size: .9em;
+	margin: 5px 0;
+}
+	
 
 /*Request Info*/
 .request {

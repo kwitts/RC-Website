@@ -117,10 +117,16 @@ $('.center').click(function () {
 
 $('.insights a').click(function (e) {
 	$(this).siblings().removeClass('active');
+	$('.insightsinfo div').hide();
 	$(this).addClass('active');
 	
+	var thisid = $(this).attr('id');
+	
+	$('.' + thisid).show();
+		
+	
 	$('.insights a').each(function () {
-		var current = $(this).attr('data-default');
+		var current = $(this).attr('id');
 		var hover = $(this).attr('data-hover');
 		
 		if ($(this).hasClass('active')) {

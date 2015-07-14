@@ -100,6 +100,10 @@ body {
   top: 0;
   width: 100%;
   z-index: 9000;
+  height: 100px;
+}
+.header-container header{
+  height: 100px;
 }
 .footer-container, .main aside {
   border-top: 20px solid #0097B8;
@@ -157,6 +161,13 @@ nav a.menu-request {
 nav a.menu-request:hover {
   color: #fff;
   background: #F77C63;
+}
+
+.anchor{
+  display: block;
+  height: 100px; /*same height as header*/
+  margin-top: -100px; /*same height as header*/
+  visibility: hidden;
 }
 
 /* ==============
@@ -931,6 +942,7 @@ input {
 .clearfix {
   *zoom: 1;
 }
+
 
 /* ==========================================================================
    Print styles

@@ -120,3 +120,11 @@ $('.insights a').click(function(e) {
   });
   e.preventDefault();
 });
+
+$('.funnelspin').load(function() {
+  $(this).addClass('flip');
+  $('.top').addClass('drop');
+  $('.bottom1').delay(2600).animate({opacity:'1'},1000);
+  $('.bottom2').delay(2700).animate({opacity:'1'},1000);
+  $('.bottom3').delay(2800).animate({opacity:'1'},1000);
+});

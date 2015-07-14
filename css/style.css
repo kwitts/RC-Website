@@ -59,7 +59,7 @@ h3 {
   color: #222;
 }
 .center-text {
-  text-align: center;
+  text-align: center !important;
 }
 .center-margin {
   margin: 0 auto;
@@ -620,6 +620,53 @@ input {
   width: 100%;
 }
 
+/*funnels*/
+.funnel {
+  position: relative;
+  overflow: hidden;
+}
+.funnel .hide, .funnel .top, .funnel .funnelspin, .funnel .bottom1, .funnel .bottom2, .funnel .bottom3 {
+  width: 100%;
+  max-width: 360px;
+}
+.funnel .hide {
+  opacity: 0;
+}
+.funnel .top, .funnel .bottom1, .funnel .bottom2, .funnel .bottom3 {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+}
+.funnel .top {
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity 500ms ease-in-out;
+          transition: opacity 500ms ease-in-out;
+  -webkit-transition-delay: 2100ms;
+          transition-delay: 2100ms;
+}
+.funnel .top.drop {
+  opacity: 1;
+}
+.funnel .funnelspin {
+  position: absolute;
+  top: 24.93%;
+  left: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: transform 1500ms ease-in-out;
+          transition: transform 1500ms ease-in-out;
+  -webkit-transition-delay: 500ms;
+          transition-delay: 500ms;
+}
+.funnel .funnelspin.flip {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+.funnel .bottom1, .funnel .bottom2, .funnel .bottom3 {
+  top: 73.28%;
+}
+
 /*Request Info*/
 
 .request {
@@ -746,7 +793,7 @@ input {
   input {
     width: 60%;
   }
-  .button {
+  .button.r-icon, .button.reg {
     width: 280px;
   }
   .page-title {

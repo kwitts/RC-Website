@@ -531,19 +531,6 @@ input {
   text-align: center !important;
 }
 
-/*How it Works*/
-
-.page-title.howitworks {
-  /*background: #E9E9Ea;*/
-  background: #2b3849;
-}
-.page-title.howitworks section {
-  text-align: center !important;
-}
-.page-title.howitworks section img {
-  width: 100%;
-  max-width: 800px;
-}
 
 /*Venn Diagram*/
 
@@ -631,6 +618,18 @@ input {
   width: 100%;
 }
 
+/*How it Works*/
+
+.page-title.howitworks {
+  /*background: #E9E9Ea;*/
+  background: #2b3849;
+}
+.page-title.howitworks section {
+  text-align: center !important;
+}
+.page-title.howitworks section img {
+  width: 100%;
+}
 /*funnels*/
 .funnel {
   position: relative;
@@ -638,7 +637,6 @@ input {
 }
 .funnel .hide, .funnel .top, .funnel .funnelspin, .funnel .bottom1, .funnel .bottom2, .funnel .bottom3 {
   width: 100%;
-  max-width: 360px;
 }
 .funnel .hide {
   opacity: 0;

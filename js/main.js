@@ -8,7 +8,6 @@
         document.documentElement.clientHeight : // Standards
         document.body.clientHeight; // Quirks
     }
-
     return height;
   }
 

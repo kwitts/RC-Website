@@ -99,25 +99,22 @@ $('.venn .diagram').click(function() {
 });
 
 $('.insights a').click(function(e) {
-  var this = $('this');
-
-  this.siblings().removeClass('active');
+  $(this).siblings().removeClass('active');
   $('.insightsinfo div').hide();
-  this.addClass('active');
+  $(this).addClass('active');
 
-  var thisid = this.attr('id');
+  var thisid = $(this).attr('id');
 
   $('.' + thisid).show();
 
+  $('.insights a').each(function() {
+    var current = $(this).attr('id');
+    var hover = $(this).attr('data-hover');
 
-  this.each(function() {
-    var current = this.attr('id');
-    var hover = this.attr('data-hover');
-
-    if (this.hasClass('active')) {
-      this.find('img').attr('src', '../images/' + hover + '.png');
+    if ($(this).hasClass('active')) {
+      $(this).find('img').attr('src', '../images/' + hover + '.png');
     } else {
-      this.find('img').attr('src', '../images/' + current + '.png');
+      $(this).find('img').attr('src', '../images/' + current + '.png');
     }
   });
   e.preventDefault();

@@ -235,7 +235,6 @@ nav ul {
   display: block;
   width: 100%;
   padding: 0;
-  padding-left: 10px;
   background: #F6936F;
   color: white;
   text-decoration: none;
@@ -257,6 +256,8 @@ input {
 }
 .r-icon {
   text-align: left;
+  width: 280px;
+  padding-left: 10px;
 }
 .r-icon img {
   float: right;
@@ -405,6 +406,68 @@ input {
   font-style: italic;
   text-align: right;
   float: right;
+}
+
+/*Not Just Tech*/
+/*.tech {
+  min-height: 500px;
+}*/
+.tech .pop-top {
+  width: 100%;
+  background: #2B3849;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.tech .pop-top img {
+  width: 100%;
+  max-width: 450px;
+}
+.tech-scroll {
+  background: url(../images/tech-scroll.png) center top repeat-y;
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+}
+.tech-scroll .pop {
+  margin: 30px auto;
+  padding: 15px;
+  box-sizing: border-box;
+  background: #E9E9EA;
+  border: 5px solid;
+  width: 100%;
+  max-width: 450px;
+  overflow: hidden;
+  opacity: 0;
+}
+.tech-scroll .pop:last-child {
+  padding: 0;
+  background: transparent;
+  border: 0px;
+  height: 56px;
+}
+.tech-scroll .pop h3 {
+  padding: 10px 0 0;
+}
+.tech-scroll .pop p {
+  margin: 0;
+}
+.tech-scroll .pop.tech1, .tech-scroll .pop.tech3, .tech-scroll .pop.tech5 {
+  border-color: #0079C1;
+}
+.tech-scroll .pop.tech2, .tech-scroll .pop.tech4, .tech-scroll .pop.tech6 {
+  border-color: #20B7AC;
+}
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 800ms ease forwards;
+  animation-delay: 800ms;
+}
+
+@keyframes come-in {
+  to { transform: translateY(0); }
+  0% { opacity: 0; }
+  1% { opacity: 0; }
+100% { opacity: 1; }
 }
 
 /*Why Implement*/
@@ -860,9 +923,6 @@ input {
   input {
     width: 60%;
   }
-  .button.r-icon, .button.reg {
-    width: 280px;
-  }
   .page-title {
     font-size: 1.3em;
   }
@@ -876,6 +936,12 @@ input {
   }
   .page-title .button {
     margin: 0;
+  }
+  .reg {
+    display: inline-block;
+    width: auto !important;
+    padding: 0 40px !important;
+    margin: 0 auto;
   }
   .client {
     width: 200px;
@@ -897,6 +963,12 @@ input {
   }
   #marketers article section .slideout .content h4 {
     display: block;
+  }
+  .tech-scroll .pop.tech1, .tech-scroll .pop.tech3, .tech-scroll .pop.tech5 {
+    margin-left: 100px;
+  }
+  .tech-scroll .pop.tech2, .tech-scroll .pop.tech4, .tech-scroll .pop.tech6 {
+    margin-right: 100px;
   }
   .socialbar li div {
     font-size: 3.5em;

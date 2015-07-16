@@ -50,6 +50,21 @@
     $(window).scroll();
   });
 })(jQuery);
+(function($) {
+  $.fn.visible = function(partial) {
+
+      var $t            = $(this),
+          $w            = $(window),
+          viewTop       = $w.scrollTop(),
+          viewBottom    = viewTop + $w.height(),
+          _top          = $t.offset().top,
+          _bottom       = _top + $t.height(),
+          compareTop    = partial === true ? _bottom : _top,
+          compareBottom = partial === true ? _top : _bottom;
+
+    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+  };
+})(jQuery);
 
 $('.menu').click(function(e) {
   $('nav ul').slideToggle('fast');
@@ -80,6 +95,17 @@ $('.bars').bind('inview', function(event, visible) {
   } else {
     // element has gone out of viewport
   }
+});
+
+$(window).scroll(function(event) {
+
+  $(".pop").each(function(i, el) {
+    var el = $(el);
+    if (el.visible(true)) {
+      el.addClass("come-in"); 
+    }
+  });
+
 });
 
 $('.venn a').click(function(e) {

@@ -126,3 +126,16 @@ $('.funnelspin').load(function() {
   $('.bottom2').delay(2800).animate({opacity:'1'},1000);
   $('.bottom3').delay(2900).animate({opacity:'1'},1000);
 });
+$('.socialbar').bind('inview', function(event, visible) {
+  if (visible == true) {
+    $(function() {
+      $(".socialbar li").each(function(key, bar) {
+        var number = $(this).data('number');
+
+        $(this).animate({'width': number + '%'}, 1000);
+      });
+    });
+  } else {
+    // element has gone out of viewport
+  }
+});

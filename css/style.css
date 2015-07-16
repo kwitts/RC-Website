@@ -617,6 +617,50 @@ input {
 .casestudy img {
   width: 100%;
 }
+.socialbar {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.socialbar li {
+  display: block;
+  float: left;
+  height: 70px;
+  /*line-height: 70px;*/
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+.socialbar li i {
+  font-size: 6em;
+  position: absolute;
+  opacity: .4;
+  right: -5px;
+  top: -12px;
+}
+.socialbar li label {
+  clear: both;
+  font-size: .8em;
+}
+.socialbar li div {
+  font-size: 1.9em;
+}
+.socialbar li.bar-email {
+  background: #20b7ac;
+  width: 0%;
+}
+.socialbar li.bar-facebook {
+  background: #3A5A8F;
+  width: 0%;
+}
+.socialbar li.bar-twitter {
+  background: #10A7DD;
+  width: 0%;
+}
 
 /*How it Works*/
 
@@ -727,6 +771,17 @@ input {
   }
   .page-title.analytics .insights img {
     width: auto;
+  }
+  .socialbar li {
+    text-align: right;
+  }
+  .socialbar li label {
+    font-size: 1em;
+    padding-right: 3px;
+  }
+  .socialbar li div {
+    font-size: 2.8em;
+    padding-right: 3px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -839,6 +894,9 @@ input {
   }
   #marketers article section .slideout .content h4 {
     display: block;
+  }
+  .socialbar li div {
+    font-size: 3.5em;
   }
   .floatl {
     float: left;

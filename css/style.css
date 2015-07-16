@@ -460,7 +460,7 @@ input {
 .come-in {
   transform: translateY(150px);
   animation: come-in 800ms ease forwards;
-  animation-delay: 800ms;
+  animation-delay: 300ms;
 }
 
 @keyframes come-in {

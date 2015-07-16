@@ -153,6 +153,10 @@ nav a:hover {
   color: white;
   background: #182029;
 }
+nav a.active {
+  font-weight: 700;
+  background: #182029;
+}
 nav a.menu-request {
   font-weight: 700;
   color: #fff;
@@ -948,6 +952,11 @@ input {
     background: #ECEDEF;
   }
   nav a:hover {
+    color: #0079C1;
+    background: #ECEDEF;
+  }
+  nav a.active {
+    font-weight: 700;
     color: #0079C1;
     background: #ECEDEF;
   }

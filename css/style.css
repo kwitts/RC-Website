@@ -321,6 +321,10 @@ input {
 .page-title .button {
   margin: 3% auto 0;
 }
+.basic-page {
+  padding-top: 110px;
+  box-sizing: border-box;
+}
 
 /*Clients*/
 

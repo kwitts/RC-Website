@@ -236,6 +236,9 @@ nav ul {
 .footer-container footer a:hover, .footer-container footer a:active {
   text-decoration: underline;
 }
+.footer-container footer .last {
+  text-align: right;
+}
 .main-container {
   border-bottom: #C5C5C5 1px solid;
   padding: 20px 0;

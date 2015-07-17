@@ -227,7 +227,7 @@ nav ul {
 .footer-container footer ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 20px;
 }
 .footer-container footer a {
   color: #E9E9EA;
@@ -236,8 +236,8 @@ nav ul {
 .footer-container footer a:hover, .footer-container footer a:active {
   text-decoration: underline;
 }
-.footer-container footer .last {
-  text-align: right;
+.footer-container footer .half {
+  text-align: center;
 }
 .main-container {
   border-bottom: #C5C5C5 1px solid;
@@ -429,31 +429,46 @@ input {
 }
 
 /*Not Just Tech*/
-/*.tech {
-  min-height: 500px;
-}*/
+.tech-header {
+  background: #2B3849;
+  color: #E9E9EA;
+  margin: -20px 0 0;
+  padding: 20px 0;
+}
+.tech {
+  width: 100%;
+  margin: 0 auto;
+}
 .tech .pop-top {
   width: 100%;
-  background: #2B3849;
+  background: #E9E9EA;
   margin: 0 auto;
   overflow: hidden;
+  padding: 30px 10px;
+  box-sizing: border-box;
+  border: 10px solid #2B3849;
+  border-top: 0;
+  border-radius: 0 0 100px 100px;
 }
 .tech .pop-top img {
-  width: 100%;
-  max-width: 450px;
+  height: 100%;
+  width: auto;
+  max-height: 150px;
+  margin: 10px;
 }
 .tech-scroll {
   background: url(../images/tech-scroll.png) center top repeat-y;
   width: 100%;
   text-align: center;
+  padding: 0;
   padding-top: 30px;
+  margin: 0;
+  list-style: none;
 }
 .tech-scroll .pop {
-  margin: 30px auto;
-  padding: 15px;
+  margin: 0 auto 40px;
+  padding: 10px 5px 13px;
   box-sizing: border-box;
-  background: #E9E9EA;
-  border: 5px solid;
   width: 100%;
   max-width: 450px;
   overflow: hidden;
@@ -465,17 +480,40 @@ input {
   border: 0px;
   height: 56px;
 }
+.tech-scroll .pop img {
+  float: none;
+  margin-right: 0;
+  margin-bottom: 10px;
+  width: 80px;
+}
+.tech-scroll .pop div {
+  display: block;
+  float: none;
+  width: 100%;
+  box-sizing: border-box;
+  border: 5px solid;
+  background: #E9E9EA;
+  margin: 0 auto;
+  padding: 0 0 10px;
+}
 .tech-scroll .pop h3 {
   padding: 10px 0 0;
 }
-.tech-scroll .pop p {
-  margin: 0;
+.tech-scroll .pop ul {
+  padding-left: 0;
+  list-style: none;
 }
-.tech-scroll .pop.tech1, .tech-scroll .pop.tech3, .tech-scroll .pop.tech5 {
+.tech-scroll .pop:nth-child(odd) div {
   border-color: #0079C1;
 }
-.tech-scroll .pop.tech2, .tech-scroll .pop.tech4, .tech-scroll .pop.tech6 {
+.tech-scroll .pop:nth-child(even) div {
   border-color: #20B7AC;
+}
+.tech-scroll .pop:nth-child(odd) h3 {
+  color: #0079C1;
+}
+.tech-scroll .pop:nth-child(even) h3 {
+  color: #20B7AC;
 }
 .come-in {
   transform: translateY(150px);
@@ -493,13 +531,13 @@ input {
 /*Why Implement*/
 
 .bx-wrapper {
-  border: #D4D5D6 solid 1px;
   padding: 25px 10px;
   text-align: center;
 }
 .bx-viewport {
   height: auto !important;
   left: 0 !important;
+  background: #E9E9EA !important;
 }
 .bx-thumbnail {
   width: 100%;
@@ -869,6 +907,8 @@ input {
     font-size: 2.8em;
     padding-right: 3px;
   }
+
+
 }
 @media only screen and (min-width: 768px) {
   /* ============
@@ -909,6 +949,12 @@ input {
   .main aside {
     float: right;
     width: 28%;
+  }
+  .footer-container footer .half {
+    text-align: left;
+  }
+  .footer-container footer .last {
+    text-align: right;
   }
   .row {
     clear: both;
@@ -984,12 +1030,17 @@ input {
   #marketers article section .slideout .content h4 {
     display: block;
   }
-  .tech-scroll .pop.tech1, .tech-scroll .pop.tech3, .tech-scroll .pop.tech5 {
-    margin-left: 100px;
+  .tech {
+    width: 80%;
   }
-  .tech-scroll .pop.tech2, .tech-scroll .pop.tech4, .tech-scroll .pop.tech6 {
-    margin-right: 100px;
+  /*.tech .pop-top img {
+    float: left;
+    margin-right: 20px;
+  }*/
+  .tech .pop-top h1 {
+    line-height: 1.5em;
   }
+
   .socialbar li div {
     font-size: 3.5em;
   }
@@ -1056,6 +1107,39 @@ input {
   }
   .page-title.analytics h1 {
     font-size: 2.5em;
+  }
+  .tech .pop-top {
+    width: 60%;
+    padding: 30px 20px;
+  }
+  .tech-scroll .pop:nth-child(odd) {
+    margin-left: 100px;
+  }
+  .tech-scroll .pop:nth-child(odd) img, .tech-scroll .pop:nth-child(odd) div {
+    float: right;
+  }
+  .tech-scroll .pop:nth-child(odd) img{
+    margin-left: 15px;
+    position: relative;
+  }
+  .tech-scroll .pop:nth-child(odd) div {
+    width: 78%;
+  }
+  .tech-scroll .pop:nth-child(even) {
+    margin-right: 100px;
+  }
+  .tech-scroll .pop:nth-child(even) img, .tech-scroll .pop:nth-child(even) div {
+    float: left;
+  }
+  .tech-scroll .pop:nth-child(even) img{
+    margin-right: 15px;
+    position: relative;
+  }
+  .tech-scroll .pop:nth-child(even) div {
+    width: 78%;
+  }
+  .tech-scroll .pop:last-child {
+    margin: 0 auto;
   }
 }
 

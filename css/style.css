@@ -186,8 +186,8 @@ nav a.menu-request:hover {
   padding: 0px 5% 10px;
 }
 .footer-container footer {
-  color: white;
   padding: 20px 0;
+  overflow: hidden;
 }
 
 /* ===============
@@ -222,6 +222,19 @@ nav ul {
 }
 .footer-container {
   background: #182029;
+  color: #20b7ac;
+}
+.footer-container footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-container footer a {
+  color: #E9E9EA;
+  text-decoration: none;
+}
+.footer-container footer a:hover, .footer-container footer a:active {
+  text-decoration: underline;
 }
 .main-container {
   border-bottom: #C5C5C5 1px solid;

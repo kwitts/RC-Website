@@ -65,7 +65,10 @@
     return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
   };
 })(jQuery);
-
+var currentYear = (new Date).getFullYear();
+$(document).ready(function() {
+  $(".year").text( (new Date).getFullYear() );
+});
 $('.menu').click(function(e) {
   $('nav ul').slideToggle('fast');
   $('.menu i').toggleClass('fa-navicon fa-times');
@@ -102,7 +105,7 @@ $(window).scroll(function(event) {
   $(".pop").each(function(i, el) {
     var el = $(el);
     if (el.visible(true)) {
-      el.addClass("come-in"); 
+      el.addClass("come-in");
     }
   });
 

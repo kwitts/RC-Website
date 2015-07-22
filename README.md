@@ -1,2 +1,2 @@
 # RC-Website
-responsive one-page website w/ animation for work client
+responsive website w/ css animation/transitions for work client

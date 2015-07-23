@@ -125,7 +125,13 @@ $('.venn .diagram').click(function() {
   $(this).removeClass('active');
   $(this).attr('src', 'images/venn_all.png');
 });
-
+// $('.insights a img').hover(function() {
+//   ar current = $(this).attr('id');
+//   var hover = $(this).attr('data-hover');
+//   $(this).attr('src', '../images/' + hover + '.png');
+//     }, function() {
+//   $(this).attr("src", '../images/' + current + '.png');
+// });
 $('.insights a').click(function(e) {
   $(this).siblings().removeClass('active');
   $('.insightsinfo div').hide();
@@ -135,18 +141,26 @@ $('.insights a').click(function(e) {
 
   $('.' + thisid).show();
 
-  $('.insights a').each(function() {
-    var current = $(this).attr('id');
-    var hover = $(this).attr('data-hover');
-
-    if ($(this).hasClass('active')) {
-      $(this).find('img').attr('src', '../images/' + hover + '.png');
-    } else {
-      $(this).find('img').attr('src', '../images/' + current + '.png');
-    }
-  });
+  // $('.insights a').each(function() {
+  //   var current = $(this).attr('id');
+  //   var hover = $(this).attr('data-hover');
+  //
+  //   if ($(this).hasClass('active')) {
+  //     $(this).find('img').attr('src', '../images/' + hover + '.png');
+  //   } else {
+  //     $(this).find('img').attr('src', '../images/' + current + '.png');
+  //   }
+  // });
   e.preventDefault();
 });
+$('#insights_02').click(function() {
+  $(".socialbar li").each(function(key, bar) {
+    var number = $(this).data('number');
+
+    $(this).animate({'width': number + '%'}, 1000);
+  });
+});
+
 
 $('.funnelspin').load(function() {
   $(this).addClass('flip');
@@ -154,19 +168,6 @@ $('.funnelspin').load(function() {
   $('.bottom1').delay(2600).animate({opacity:'1'},1000);
   $('.bottom2').delay(2800).animate({opacity:'1'},1000);
   $('.bottom3').delay(2900).animate({opacity:'1'},1000);
-});
-$('.socialbar').bind('inview', function(event, visible) {
-  if (visible == true) {
-    $(function() {
-      $(".socialbar li").each(function(key, bar) {
-        var number = $(this).data('number');
-
-        $(this).animate({'width': number + '%'}, 1000);
-      });
-    });
-  } else {
-    // element has gone out of viewport
-  }
 });
 
 $('.infopop').click(function(e){

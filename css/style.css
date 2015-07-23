@@ -715,6 +715,85 @@ input {
 }
 .page-title.analytics .insights img {
   width: 100%;
+  opacity:0;
+}
+.page-title.analytics .insights a {
+  display: block;
+  width: 100%;
+  height: 16.66%;
+}
+.insights1 {
+  background: url('../images/insights_01.png') no-repeat;
+  background-size: contain;
+  -webkit-transition: background .3s ease-in-out;
+          transition: background .3s ease-in-out;
+
+}
+.insights1.active, .insights1:hover{
+  background: url('../images/insightshover_01.png') no-repeat;
+  background-size: contain;
+  -webkit-transition: background .3s ease-in-out;
+          transition: background .3s ease-in-out;
+}
+.insights2 {
+  background: url('../images/insights_02.png') no-repeat;
+  background-size: contain;
+  -webkit-transition: background .3s ease-in-out;
+          transition: background .3s ease-in-out;
+}
+.insights2.active, .insights2:hover{
+  background: url('../images/insightshover_02.png') no-repeat;
+  background-size: contain;
+  -webkit-transition: background .3s ease-in-out;
+          transition: background .3s ease-in-out;
+}
+.insights3 {
+  background: url('../images/insights_03.png') no-repeat;
+  background-size: contain;
+  -webkit-transition: background .3s ease-in-out;
+          transition: background .3s ease-in-out;
+}
+.insights3.active, .insights3:hover{
+  background: url('../images/insightshover_03.png') no-repeat;
+  background-size: contain;
+  -webkit-transition: background .3s ease-in-out;
+          transition: background .3s ease-in-out;
+}
+.insights4 {
+  background: url('../images/insights_04.png') no-repeat;
+  background-size: contain;
+  -webkit-transition: background .3s ease-in-out;
+          transition: background .3s ease-in-out;
+}
+.insights4.active, .insights4:hover{
+  background: url('../images/insightshover_04.png') no-repeat;
+  background-size: contain;
+  -webkit-transition: background .3s ease-in-out;
+          transition: background .3s ease-in-out;
+}
+.insights5 {
+  background: url('../images/insights_05.png') no-repeat;
+  background-size: contain;
+  -webkit-transition: background .3s ease-in-out;
+          transition: background .3s ease-in-out;
+}
+.insights5.active, .insights5:hover{
+  background: url('../images/insightshover_05.png') no-repeat;
+  background-size: contain;
+  -webkit-transition: background .3s ease-in-out;
+          transition: background .3s ease-in-out;
+}
+.insights6 {
+  background: url('../images/insights_06.png') no-repeat;
+  background-size: contain;
+  -webkit-transition: background .3s ease-in-out;
+          transition: background .3s ease-in-out;
+}
+.insights6.active, .insights6:hover{
+  background: url('../images/insightshover_06.png') no-repeat;
+  background-size: contain;
+  -webkit-transition: background .3s ease-in-out;
+          transition: background .3s ease-in-out;
 }
 .page-title.analytics .insightsinfo {
   background: #E9E9EA;
@@ -730,7 +809,7 @@ input {
   display: block;
 }
 .page-title.analytics .insightsinfo img {
-  width: 100px;
+  width: 60px;
 }
 .page-title.analytics .insightsinfo h3 {
   padding: 10px 0 0;
@@ -747,6 +826,7 @@ input {
   width: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 .socialbar li {
   display: block;
@@ -754,7 +834,7 @@ input {
   height: 70px;
   color: #ffffff;
   font-weight: 700;
-  text-align: center;
+  text-align: center !important;
   text-transform: uppercase;
   position: relative;
   overflow: hidden;
@@ -770,8 +850,8 @@ input {
   clear: both;
   font-size: .8em;
 }
-.socialbar li div {
-  font-size: 1.9em;
+.socialbar li p {
+  font-size: 1.9em !important;
 }
 .socialbar li.bar-email {
   background: #20b7ac;
@@ -939,17 +1019,17 @@ input {
     background: url(../images/requestbg.png) no-repeat left center;
   }
   .page-title.analytics .insights img {
-    width: auto;
+    width: 100%;
+    opacity:0;
   }
   .socialbar li {
-    text-align: right;
+    text-align: right !important;
   }
   .socialbar li label {
     font-size: 1em;
     padding-right: 3px;
   }
-  .socialbar li div {
-    font-size: 2.8em;
+  .socialbar li p {
     padding-right: 3px;
   }
 
@@ -1087,8 +1167,8 @@ input {
     line-height: 1.5em;
   }
 
-  .socialbar li div {
-    font-size: 3.5em;
+  .socialbar li p {
+    font-size: 2em !important;
   }
   .floatl {
     float: left;

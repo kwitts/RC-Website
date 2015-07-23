@@ -125,13 +125,6 @@ $('.venn .diagram').click(function() {
   $(this).removeClass('active');
   $(this).attr('src', 'images/venn_all.png');
 });
-// $('.insights a img').hover(function() {
-//   ar current = $(this).attr('id');
-//   var hover = $(this).attr('data-hover');
-//   $(this).attr('src', '../images/' + hover + '.png');
-//     }, function() {
-//   $(this).attr("src", '../images/' + current + '.png');
-// });
 $('.insights a').click(function(e) {
   $(this).siblings().removeClass('active');
   $('.insightsinfo div').hide();
@@ -140,17 +133,6 @@ $('.insights a').click(function(e) {
   var thisid = $(this).attr('id');
 
   $('.' + thisid).show();
-
-  // $('.insights a').each(function() {
-  //   var current = $(this).attr('id');
-  //   var hover = $(this).attr('data-hover');
-  //
-  //   if ($(this).hasClass('active')) {
-  //     $(this).find('img').attr('src', '../images/' + hover + '.png');
-  //   } else {
-  //     $(this).find('img').attr('src', '../images/' + current + '.png');
-  //   }
-  // });
   e.preventDefault();
 });
 $('#insights_02').click(function() {

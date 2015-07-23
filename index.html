@@ -49,7 +49,7 @@
             <li><a href="how-it-works">How it Works</a></li>
             <li><a href="features">Features</a></li>
             <li><a href="analytics">Analytics</a></li>
-            <li><a href="#request" class="menu-request">Request Info</a></li>
+            <li><a href="#" class="menu-request infopop">Request Info</a></li>
           </ul>
         </nav>
       </div>
@@ -83,7 +83,7 @@
         </section>
         <footer>
           <a href="#request" class="button r-icon floatl">Request Info Now <img src="images/request.png"/></a>
-          <a href="#" class="button r-icon floatr">Watch the Video <img src="images/watch.png"/></a>
+          <a href="#" class="button r-icon floatr infopop">Watch the Video <img src="images/watch.png"/></a>
         </footer>
       </article>
 
@@ -354,16 +354,16 @@
     <!-- #main -->
   </div>
   <!-- #philosophy -->
-
-  <div id="request" class="main-container dark">
-    <div class="main wrapper request clearfix">
-
+  <div class="overlay"></div>
+  <div id="request" class="modal dark">
+    <div class="main request clearfix">
       <article>
         <header>
           <h1 class="white-text">REQUEST INFORMATION OR A DEMO</h1>
           <p class="white-text">Enter your email below to request more information about ReferralClix and what referral marketing can do for you.</p>
           <input type="email" name="email" autocomplete="on" placeholder="yourname@domain.com" required /><br/>
-          <button type="submit" class="button reg" style="margin:20px auto;">Request Info Now</button>
+          <button type="submit" class="button reg" style="margin:20px auto;">Send Request</button>
+          <a href="#" class="close">CLOSE</a>
         </header>
       </article>
 

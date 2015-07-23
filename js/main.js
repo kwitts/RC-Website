@@ -168,3 +168,14 @@ $('.socialbar').bind('inview', function(event, visible) {
     // element has gone out of viewport
   }
 });
+
+$('.infopop').click(function(e){
+  $('#request').fadeIn("slow");
+  $('.overlay').fadeIn("slow");
+  e.preventDefault();
+});
+$('.overlay, .close').click(function(e){
+  $('#request').fadeOut("slow");
+  $('.overlay').fadeOut("slow");
+  e.preventDefault();
+});

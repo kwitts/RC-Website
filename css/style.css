@@ -636,11 +636,24 @@ input {
   line-height: 1.2em;
 }
 #marketers article section .slideout img {
+
+}
+#marketers article section .slideout .slideout-btn {
   position: absolute;
-  top: 35px;
+  top: 50%;
   right: 0;
-  width: 90px;
+  margin-top: -45px;
   cursor: pointer;
+  width: 90px;
+  height: 90px;
+  background: url('../images/create.png');
+  background-size: contain;
+  -webkit-transition: background .3s ease-in-out;
+          transition: background .3s ease-in-out;
+}
+#marketers article section .slideout .slideout-btn:hover, #marketers article section .slideout .slideout-btn.active {
+  background: url('../images/create-hover.png');
+  background-size: contain;
 }
 
 /*Features*/
@@ -746,14 +759,14 @@ input {
 }
 
 @-webkit-keyframes pulse {
-    0% { -webkit-transform: scale(.9); }
-    50% { -webkit-transform: scale(1); }
-    100% { -webkit-transform: scale(.9); }
+    0% { -webkit-transform: scale(.85); -webkit-opacity: .6; }
+    50% { -webkit-transform: scale(1); -webkit-opacity: 1; }
+    100% { -webkit-transform: scale(.85); -webkit-opacity: .6; }
 }
 @keyframes pulse {
-    0% { transform: scale(.9); }
-    50% { transform: scale(1); }
-    100% { transform: scale(.9); }
+    0% { transform: scale(.85); opacity: .6; }
+    50% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(.85); opacity: .6; }
 }
 .pulse {
     -webkit-animation-name: pulse;
@@ -1212,9 +1225,19 @@ input {
     margin-left: 160px;
     font-size: 1em;
   }
-  #marketers article section .slideout img {
+  #marketers article section .slideout .slideout-btn {
     width: 160px;
+    height: 160px;
+    background: url('../images/create.png');
+    background-size: contain;
     top: 0;
+    margin: 0;
+    -webkit-transition: background .3s ease-in-out;
+            transition: background .3s ease-in-out;
+  }
+  #marketers article section .slideout .slideout-btn:hover, #marketers article section .slideout .slideout-btn.active {
+    background: url('../images/create-hover.png');
+    background-size: contain;
   }
   #marketers article section .slideout .content {
     padding-right: 150px;

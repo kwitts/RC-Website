@@ -79,11 +79,14 @@ $('.testimonials-slider').bxSlider({
   auto: true
 });
 
-$('.slideout img').click(function() {
+$('.slideout-btn').click(function(e) {
   $(this).parent().toggleClass('showslide');
   $(this).parent().children('.content').fadeToggle('fast');
   $(this).parent().prev().fadeToggle('fast');
+  $(this).toggleClass('active');
+  e.preventDefault();
 });
+
 $('.bars').bind('inview', function(event, visible) {
   if (visible == true) {
     $(function() {

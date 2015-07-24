@@ -64,6 +64,13 @@ h3 {
 .center-margin {
   margin: 0 auto;
 }
+a:link, a:visited {
+    color: #0079c1;
+    text-decoration: none;
+}
+a:hover, a:active {
+    color: #20b7ac;
+}
 audio, canvas, iframe, img, svg, video {
   vertical-align: middle;
 }
@@ -115,7 +122,7 @@ body {
   width: 200px;
   color: white;
   float: left;
-  margin: 10px 0;
+  margin: 10px 0 0;
 }
 article {
   text-align: center;
@@ -146,7 +153,7 @@ nav a {
   text-decoration: none;
   font-weight: light;
   text-transform: uppercase;
-  color: white;
+  color: white !important;
   background: #3C4A60;
 }
 nav a:hover {
@@ -159,11 +166,11 @@ nav a.active {
 }
 nav a.menu-request {
   font-weight: 700;
-  color: #fff;
+  color: #fff !important;
   background: #F6936F;
 }
 nav a.menu-request:hover {
-  color: #fff;
+  color: #fff !important;
   background: #F77C63;
 }
 
@@ -212,7 +219,7 @@ nav a.menu-request:hover {
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-  color: white;
+  color: white !important;
   background: #3C4A60;
   float: right;
 }
@@ -1223,16 +1230,16 @@ input {
     text-decoration: none;
     font-weight: light;
     text-transform: uppercase;
-    color: #222;
+    color: #222 !important;
     background: #ECEDEF;
   }
   nav a:hover {
-    color: #0079C1;
+    color: #0079C1 !important;
     background: #ECEDEF;
   }
   nav a.active {
     font-weight: 700;
-    color: #0079C1;
+    color: #0079C1 !important;
     background: #ECEDEF;
   }
   .main-container {

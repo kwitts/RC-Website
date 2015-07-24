@@ -678,27 +678,86 @@ input {
 .venn img {
   max-width: 100%;
 }
+.venn .diagram {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .venn a {
   display: block;
   position: absolute;
-  width: 26%;
-  height: 26%;
-  border-radius: 50%;
+  width: 26.33%;
+  height: 12.5%;
 }
 .venn a:hover {
-  background: url(../images/venn_hover.png) no-repeat center center;
+  -webkit-transition: background .3s ease-in-out;
+          transition: background .3s ease-in-out;
 }
-.venn .venn_owned {
-  top: 29%;
-  left: 14.4%;
+.venn .venn-sec.owned {
+  top: 36.83%;
+  left: 10.5%;
+  background: url('../images/venn-owned.png') no-repeat;
+  background-size: contain;
+
 }
-.venn .venn_paid {
-  top: 29%;
-  left: 58.8%;
+.venn .venn-sec.owned:hover {
+  background: url('../images/venn-hover-owned.png') no-repeat;
+  background-size: contain;
 }
-.venn .venn_earned {
-  top: 67%;
-  left: 36.6%;
+.venn .venn-sec.paid {
+  top: 36.83%;
+  left: 63.16%;
+  background: url('../images/venn-paid.png') no-repeat;
+  background-size: contain;
+}
+.venn .venn-sec.paid:hover {
+  background: url('../images/venn-hover-paid.png') no-repeat;
+  background-size: contain;
+}
+.venn .venn-sec.earned {
+  top: 71.5%;
+  left: 36.83%;
+  background: url('../images/venn-earned.png') no-repeat;
+  background-size: contain;
+}
+.venn .venn-sec.earned:hover {
+  background: url('../images/venn-hover-earned.png') no-repeat;
+  background-size: contain;
+}
+.venn .venn-sec.center {
+  height: 26.33%;
+  top: 41.5%;
+  left: 36.83%;
+  background: url('../images/venn-center.png') no-repeat;
+  background-size: contain;
+}
+.venn .venn-sec.center:hover {
+  background: url('../images/venn-hover-center.png') no-repeat;
+  background-size: contain;
+}
+
+.animated {
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulse {
+    0% { -webkit-transform: scale(.9); }
+    50% { -webkit-transform: scale(1); }
+    100% { -webkit-transform: scale(.9); }
+}
+@keyframes pulse {
+    0% { transform: scale(.9); }
+    50% { transform: scale(1); }
+    100% { transform: scale(.9); }
+}
+.pulse {
+    -webkit-animation-name: pulse;
+            animation-name: pulse;
 }
 
 /*Insights & Analytics Page*/

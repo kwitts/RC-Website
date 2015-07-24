@@ -111,20 +111,20 @@ $(window).scroll(function(event) {
 
 });
 
-$('.venn a').click(function(e) {
-  var vennsec = $(this).attr('class');
-  var diagram = $('.diagram');
-  $(this).siblings('a').hide();
-
-  diagram.attr('src', 'images/' + vennsec + '.png');
-  diagram.addClass('active');
-  e.preventDefault();
-});
-$('.venn .diagram').click(function() {
-  $(this).siblings('a').show();
-  $(this).removeClass('active');
-  $(this).attr('src', 'images/venn_all.png');
-});
+// $('.venn a').click(function(e) {
+//   var vennsec = $(this).attr('class');
+//   var diagram = $('.diagram');
+//   $(this).siblings('a').hide();
+//
+//   diagram.attr('src', 'images/' + vennsec + '.png');
+//   diagram.addClass('active');
+//   e.preventDefault();
+// });
+// $('.venn .diagram').click(function() {
+//   $(this).siblings('a').show();
+//   $(this).removeClass('active');
+//   $(this).attr('src', 'images/venn_all.png');
+// });
 $('.insights a').click(function(e) {
   $(this).siblings().removeClass('active');
   $('.insightsinfo div').hide();

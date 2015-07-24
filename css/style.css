@@ -646,13 +646,15 @@ input {
   cursor: pointer;
   width: 90px;
   height: 90px;
-  background: url('../images/create.png');
+  background: url('../images/create-sprites.png');
+  background-position: 0 0;
   background-size: contain;
   -webkit-transition: background .3s ease-in-out;
           transition: background .3s ease-in-out;
 }
 #marketers article section .slideout .slideout-btn:hover, #marketers article section .slideout .slideout-btn.active {
-  background: url('../images/create-hover.png');
+  /*background: url('../images/create-hover.png');*/
+  background-position: -160px 0;
   background-size: contain;
 }
 
@@ -790,87 +792,87 @@ input {
 .page-title.analytics a {
   display: block;
   width: 100%;
-  height: 16.666%;
 }
 .page-title.analytics .insights img {
   width: 100%;
   opacity:0;
 }
-.page-title.analytics .insights a {
+.page-title.analytics .insights .insight-btn {
   display: block;
   width: 100%;
   height: 16.66%;
+  background: url('../images/insights-sprites.png') no-repeat;
+  background-size: 100% auto;
 }
-.insights1 {
-  background: url('../images/insights_01.png') no-repeat;
-  background-size: contain;
-  -webkit-transition: background .3s ease-in-out;
-          transition: background .3s ease-in-out;
-
-}
-.insights1.active, .insights1:hover{
-  background: url('../images/insightshover_01.png') no-repeat;
-  background-size: contain;
+.page-title.analytics .insights .insights1 {
+  background-position: 0 0;
+  /*background-size: contain;*/
   -webkit-transition: background .3s ease-in-out;
           transition: background .3s ease-in-out;
 }
-.insights2 {
-  background: url('../images/insights_02.png') no-repeat;
-  background-size: contain;
+.page-title.analytics .insights .insights1.active, .page-title.analytics .insights .insights1:hover{
+  background-position: 0 9.09%;
+  /*background-size: contain;*/
   -webkit-transition: background .3s ease-in-out;
           transition: background .3s ease-in-out;
 }
-.insights2.active, .insights2:hover{
-  background: url('../images/insightshover_02.png') no-repeat;
-  background-size: contain;
+.page-title.analytics .insights .insights2 {
+  background-position: 0 18.18%;
+  /*background-size: contain;*/
   -webkit-transition: background .3s ease-in-out;
           transition: background .3s ease-in-out;
 }
-.insights3 {
-  background: url('../images/insights_03.png') no-repeat;
-  background-size: contain;
+.page-title.analytics .insights .insights2.active, .page-title.analytics .insights .insights2:hover{
+  background-position: 0 27.27%;
+  /*background-size: contain;*/
   -webkit-transition: background .3s ease-in-out;
           transition: background .3s ease-in-out;
 }
-.insights3.active, .insights3:hover{
-  background: url('../images/insightshover_03.png') no-repeat;
-  background-size: contain;
+.page-title.analytics .insights .insights3 {
+  background-position: 0 36.36%;
+  /*background-size: contain;*/
   -webkit-transition: background .3s ease-in-out;
           transition: background .3s ease-in-out;
 }
-.insights4 {
-  background: url('../images/insights_04.png') no-repeat;
-  background-size: contain;
+.page-title.analytics .insights .insights3.active, .page-title.analytics .insights .insights3:hover{
+  background-position: 0 45.45%;
+  /*background-size: contain;*/
   -webkit-transition: background .3s ease-in-out;
           transition: background .3s ease-in-out;
 }
-.insights4.active, .insights4:hover{
-  background: url('../images/insightshover_04.png') no-repeat;
-  background-size: contain;
+.page-title.analytics .insights .insights4 {
+  background-position: 0 54.54%;
+  /*background-size: contain;*/
   -webkit-transition: background .3s ease-in-out;
           transition: background .3s ease-in-out;
 }
-.insights5 {
-  background: url('../images/insights_05.png') no-repeat;
-  background-size: contain;
+.page-title.analytics .insights .insights4.active, .page-title.analytics .insights .insights4:hover{
+  background-position: 0 63.63%;
+  /*background-size: contain;*/
   -webkit-transition: background .3s ease-in-out;
           transition: background .3s ease-in-out;
 }
-.insights5.active, .insights5:hover{
-  background: url('../images/insightshover_05.png') no-repeat;
-  background-size: contain;
+.page-title.analytics .insights .insights5 {
+  background-position: 0 72.72%;
+  /*background-size: contain;*/
   -webkit-transition: background .3s ease-in-out;
           transition: background .3s ease-in-out;
 }
-.insights6 {
-  background: url('../images/insights_06.png') no-repeat;
-  background-size: contain;
+.page-title.analytics .insights .insights5.active, .page-title.analytics .insights .insights5:hover{
+  background-position: 0 81.81%;
+  /*background-size: contain;*/
   -webkit-transition: background .3s ease-in-out;
           transition: background .3s ease-in-out;
 }
-.insights6.active, .insights6:hover{
-  background: url('../images/insightshover_06.png') no-repeat;
-  background-size: contain;
+.page-title.analytics .insights .insights6 {
+  background-position: 0 90.9%;
+  /*background-size: contain;*/
+  -webkit-transition: background .3s ease-in-out;
+          transition: background .3s ease-in-out;
+}
+.page-title.analytics .insights .insights6.active, .page-title.analytics .insights .insights6:hover{
+  background-position: 0 99.99%;
+  /*background-size: contain;*/
   -webkit-transition: background .3s ease-in-out;
           transition: background .3s ease-in-out;
 }

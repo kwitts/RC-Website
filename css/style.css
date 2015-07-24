@@ -648,14 +648,11 @@ input {
   height: 90px;
   background: url('../images/create-sprites.png');
   background-position: 0 0;
-  background-size: contain;
-  -webkit-transition: background .3s ease-in-out;
-          transition: background .3s ease-in-out;
+  background-size: auto 100%;
 }
 #marketers article section .slideout .slideout-btn:hover, #marketers article section .slideout .slideout-btn.active {
   /*background: url('../images/create-hover.png');*/
-  background-position: -160px 0;
-  background-size: contain;
+  background-position: -90px 0;
 }
 
 /*Features*/
@@ -704,51 +701,38 @@ input {
   width: 26.33%;
   height: 12.5%;
 }
-.venn a:hover {
-  -webkit-transition: background .3s ease-in-out;
-          transition: background .3s ease-in-out;
-}
 .venn .venn-sec.owned {
   top: 36.83%;
   left: 10.5%;
-  background: url('../images/venn-owned.png') no-repeat;
-  background-size: contain;
+  background: url('../images/venn-owned-sprites.png') no-repeat;
+  background-size: auto 100%;
+  background-position: 100% 0;
 
-}
-.venn .venn-sec.owned:hover {
-  background: url('../images/venn-hover-owned.png') no-repeat;
-  background-size: contain;
 }
 .venn .venn-sec.paid {
   top: 36.83%;
   left: 63.16%;
-  background: url('../images/venn-paid.png') no-repeat;
-  background-size: contain;
-}
-.venn .venn-sec.paid:hover {
-  background: url('../images/venn-hover-paid.png') no-repeat;
-  background-size: contain;
+  background: url('../images/venn-paid-sprites.png') no-repeat;
+  background-size: auto 100%;
+  background-position: 100% 0;
 }
 .venn .venn-sec.earned {
   top: 71.5%;
   left: 36.83%;
-  background: url('../images/venn-earned.png') no-repeat;
-  background-size: contain;
-}
-.venn .venn-sec.earned:hover {
-  background: url('../images/venn-hover-earned.png') no-repeat;
-  background-size: contain;
+  background: url('../images/venn-earned-sprites.png') no-repeat;
+  background-size: auto 100%;
+  background-position: 100% 0;
 }
 .venn .venn-sec.center {
   height: 26.33%;
   top: 41.5%;
   left: 36.83%;
-  background: url('../images/venn-center.png') no-repeat;
-  background-size: contain;
+  background: url('../images/venn-center-sprites.png') no-repeat;
+  background-size: auto 100%;
+  background-position: 100% 0;
 }
-.venn .venn-sec.center:hover {
-  background: url('../images/venn-hover-center.png') no-repeat;
-  background-size: contain;
+.venn .venn-sec.owned:hover, .venn .venn-sec.paid:hover, .venn .venn-sec.earned:hover, .venn .venn-sec.center:hover  {
+  background-position: 0 0;
 }
 
 .animated {
@@ -806,75 +790,39 @@ input {
 }
 .page-title.analytics .insights .insights1 {
   background-position: 0 0;
-  /*background-size: contain;*/
-  -webkit-transition: background .3s ease-in-out;
-          transition: background .3s ease-in-out;
 }
 .page-title.analytics .insights .insights1.active, .page-title.analytics .insights .insights1:hover{
   background-position: 0 9.09%;
-  /*background-size: contain;*/
-  -webkit-transition: background .3s ease-in-out;
-          transition: background .3s ease-in-out;
 }
 .page-title.analytics .insights .insights2 {
   background-position: 0 18.18%;
-  /*background-size: contain;*/
-  -webkit-transition: background .3s ease-in-out;
-          transition: background .3s ease-in-out;
 }
 .page-title.analytics .insights .insights2.active, .page-title.analytics .insights .insights2:hover{
   background-position: 0 27.27%;
-  /*background-size: contain;*/
-  -webkit-transition: background .3s ease-in-out;
-          transition: background .3s ease-in-out;
 }
 .page-title.analytics .insights .insights3 {
   background-position: 0 36.36%;
-  /*background-size: contain;*/
-  -webkit-transition: background .3s ease-in-out;
-          transition: background .3s ease-in-out;
 }
 .page-title.analytics .insights .insights3.active, .page-title.analytics .insights .insights3:hover{
   background-position: 0 45.45%;
-  /*background-size: contain;*/
-  -webkit-transition: background .3s ease-in-out;
-          transition: background .3s ease-in-out;
 }
 .page-title.analytics .insights .insights4 {
   background-position: 0 54.54%;
-  /*background-size: contain;*/
-  -webkit-transition: background .3s ease-in-out;
-          transition: background .3s ease-in-out;
 }
 .page-title.analytics .insights .insights4.active, .page-title.analytics .insights .insights4:hover{
   background-position: 0 63.63%;
-  /*background-size: contain;*/
-  -webkit-transition: background .3s ease-in-out;
-          transition: background .3s ease-in-out;
 }
 .page-title.analytics .insights .insights5 {
   background-position: 0 72.72%;
-  /*background-size: contain;*/
-  -webkit-transition: background .3s ease-in-out;
-          transition: background .3s ease-in-out;
 }
 .page-title.analytics .insights .insights5.active, .page-title.analytics .insights .insights5:hover{
   background-position: 0 81.81%;
-  /*background-size: contain;*/
-  -webkit-transition: background .3s ease-in-out;
-          transition: background .3s ease-in-out;
 }
 .page-title.analytics .insights .insights6 {
   background-position: 0 90.9%;
-  /*background-size: contain;*/
-  -webkit-transition: background .3s ease-in-out;
-          transition: background .3s ease-in-out;
 }
 .page-title.analytics .insights .insights6.active, .page-title.analytics .insights .insights6:hover{
   background-position: 0 99.99%;
-  /*background-size: contain;*/
-  -webkit-transition: background .3s ease-in-out;
-          transition: background .3s ease-in-out;
 }
 .page-title.analytics .insightsinfo {
   background: #E9E9EA;
@@ -1230,16 +1178,13 @@ input {
   #marketers article section .slideout .slideout-btn {
     width: 160px;
     height: 160px;
-    background: url('../images/create.png');
-    background-size: contain;
+    background: url('../images/create-sprites.png') no-repeat;
+    background-size: auto 100%;
     top: 0;
     margin: 0;
-    -webkit-transition: background .3s ease-in-out;
-            transition: background .3s ease-in-out;
   }
   #marketers article section .slideout .slideout-btn:hover, #marketers article section .slideout .slideout-btn.active {
-    background: url('../images/create-hover.png');
-    background-size: contain;
+    background-position: -160px 0;
   }
   #marketers article section .slideout .content {
     padding-right: 150px;

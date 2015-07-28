@@ -538,13 +538,13 @@ input {
 /*Why Implement*/
 
 .bx-wrapper {
-  padding: 25px 10px;
+  padding: 10px;
   text-align: center;
 }
 .bx-viewport {
   height: auto !important;
   left: 0 !important;
-  background: #E9E9EA !important;
+  /*background: #E9E9EA !important;*/
 }
 .bx-thumbnail {
   width: 100%;
@@ -554,6 +554,34 @@ input {
 }
 .bx-context {
   font-size: 1.3em;
+  color: #2B3849;
+  background: #E9E9EA;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  position: relative;
+}
+.bx-context::after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 12px 9px 0;
+  border-color: #E9E9EA transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  bottom: -12px;
+  left: 48%;
+}
+.bx-wrapper .bx-pager {
+  padding: 0;
+  bottom: 0;
+  width: 95%;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: #E9E9EA;
+}
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+  background: #0079c1;
 }
 .slide {
   margin-top: -10px;
@@ -735,10 +763,10 @@ input {
   background-position: 0 0;
 }
 .venn .venn-info-box {
-  /*display: none;*/
+  display: none;
   position: absolute;
   top: 50%;
-  margin-top: -15%;
+  margin-top: -25%;
   left: 50%;
   margin-left: -45%;
   padding: 10px;
@@ -749,6 +777,24 @@ input {
           border-radius: 10px;
   width: 90%;
   height: auto;
+  z-index: 9999;
+}
+.venn .venn-info-box .close {
+  color: #999999;
+  font-size: 12px;
+  text-decoration: none;
+  margin: 0 auto;
+  display: block;
+  width: auto;
+  height: auto;
+  top: 0px;
+  right: 10px;
+}
+.venn .venn-info-box .close:hover {
+  color: #2b3849;
+}
+.venn .venn-info-box .venn-info {
+  display: none;
 }
 .venn .venn-info-box .overlay{
   background-color: #ffffff;

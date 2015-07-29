@@ -81,42 +81,43 @@
   <div class="main-container story">
     <div class="main wrapper clearfix">
 
-      <article>
+      <article id="story">
         <header>
           <h1>HOW REFERRALCLIX WORKS</h1>
           <h2>Note: animations pending.</h2>
         </header>
         <section>
           <p>Mike makes a purchase.</p>
-          <img src="../images/mike_01.png"/>
-          <img src="../images/mike_02.png"/>
-          <img src="../images/mike_03.png"/>
+          <div class="mike">
+            <img src="../images/mike_01.png"/>
+          </div>
         </section>
         <section>
           <p>Mike sends a referral link to his friends.</p>
-          <img src="../images/mike_03.png"/>
-          <img src="../images/referral_01.png"/>
-          <img src="../images/suzie_01.png"/>
-          <img src="../images/friends1.png"/>
+          <div class="plane">
+            <img src="../images/referral_01.png"/>
+          </div>
+          <div class="suzie">
+            <img src="../images/suzie_01.png"/>
+          </div>
+          <div class="mikesfriends">
+            <img src="../images/friends1.png"/>
+          </div>
         </section>
         <section>
           <p>Suzie recieves the link from Mike and uses it to make a purchase.</p>
-          <img src="../images/referral_01.png"/>
-          <img src="../images/referral_03.png"/>
-          <img src="../images/suzie_01.png"/>
-          <img src="../images/suzie_02.png"/>
-          <img src="../images/suzie_03.png"/>
         </section>
         <section>
           <p>Suzie then sends a referral link to her friends.</p>
-          <img src="../images/friends2.png"/>
-          <img src="../images/referral_02.png"/>
-          <img src="../images/suzie_03.png"/>
+          <div class="suziesfriends">
+            <img src="../images/friends2.png"/>
+          </div>
         </section>
         <section>
           <p>Mike receives a reward for his original purchase and referring a friend, and the cycle begins again.</p>
-          <img src="../images/mike_03.png"/>
-          <img src="../images/gift.png"/>
+          <div class="reward">
+            <img src="../images/gift.png"/>
+          </div>
         </section>
       </article>
 
@@ -164,6 +165,7 @@
   </div>
 
   <script src="../js/vendor/jquery-1.11.2.min.js"></script>
+  <script src="../js/vendor/jquery.bxslider.min.js"></script>
   <script src="../js/main.js"></script>
   <script src="../js/story.js"></script>
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

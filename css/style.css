@@ -1026,8 +1026,38 @@ input {
 }
 
 /* Mike's Story*/
-.story article section {
+#story section {
   text-align: center !important;
+  position: relative;
+}
+#story section figure {
+  margin: 0;
+}
+#story section p {
+  font-size: 1.7em;
+  color: #0079c1;
+}
+/*Step One*/
+#stepone {
+  height: 1000px;
+  position: relative;
+}
+#stepone #mikepurchase {
+  position: relative;
+  margin: 300px auto 0;
+  display: none;
+}
+#stepone #mike {
+  position: absolute;
+  left: 50%;
+  margin-left: -108px;
+  opacity: 0.6;
+  /*transform: translateX(0);*/
+  transition: opacity .3s, background .5s, transform 1s;
+  background: url('../images/mike_01.png');
+  background-repeat: no-repeat;
+  width: 216px;
+  height: 375px;
 }
 
 

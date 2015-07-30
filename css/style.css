@@ -992,17 +992,15 @@ input {
   width: 0%;
 }
 
-/*How it Works*/
+/*Funnel*/
 
-.page-title.howitworks {
-  /*background: #E9E9Ea;*/
+.page-title.features {
   background: #2b3849;
-  height: 360px;
 }
-.page-title.howitworks section {
+.page-title.features section {
   text-align: center !important;
 }
-.page-title.howitworks section img {
+.page-title.features section img {
   width: 100%;
 }
 /*funnels*/
@@ -1052,6 +1050,10 @@ input {
 }
 
 /* Mike's Story*/
+.page-title.howitworks {
+  background: #2b3849;
+  height: 360px;
+}
 .loader {
 	position: fixed;
 	left: 0px;

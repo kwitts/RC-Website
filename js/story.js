@@ -115,6 +115,34 @@ $(document).ready(function() {
      $('#plane-right2').css({ '-webkit-transform': 'translateX(-150px)' });
    }
 
+   /* MIKE - Step Five */
+   if ($(this).scrollTop() > 4315) {
+     $('#mike2').css({ 'position': 'fixed', 'top': '220px' });
+   } else {
+     $('#mike2').css({ 'position': 'absolute', 'top': '0px' });
+   }
+   if ($(this).scrollTop() > 4000) {
+     $('#mike2').css({ 'transform': 'translateX(-100px) scale(1)' });
+     $('#mike2').css({ '-webkit-transform': 'translateX(-100px) scale(1)' });
+   } else {
+     $('#mike2').css({ 'transform': 'translateX(-250px) scale(.8)' });
+     $('#mike2').css({ '-webkit-transform': 'translateX(-250px) scale(.8)' });
+   }
+
+   /* REWARD - Step Five */
+   if ($(this).scrollTop() > 4315) {
+     $('#reward').css({ 'position': 'fixed', 'top': '220px' });
+   } else {
+     $('#reward').css({ 'position': 'absolute', 'top': '0px' });
+   }
+   if ($(this).scrollTop() > 4450) {
+     $('#reward').css({ 'transform': 'translate(100px, 150px) scale(1)' });
+     $('#reward').css({ '-webkit-transform': 'translate(100px, 150px) scale(1)' });
+   } else {
+     $('#reward').css({ 'transform': 'translate(100px, -100px) scale(.8)' });
+     $('#reward').css({ '-webkit-transform': 'translate(100px, -100px) scale(.8)' });
+   }
+
 
   });
 
@@ -150,15 +178,6 @@ $(document).ready(function() {
 
   /* APPEAR/DISAPPEAR */
   $(window).scroll(function() {
-    /*MIKE*/
-    if ($(this).scrollTop() > 4500) {
-      $('#mike').css({ 'opacity': '0' });
-    } else {
-      $('#mike').css({ 'opacity': '1' });
-    }
-
-    /*SUZIE*/
-
     /*MIKE*/
     if ($(this).scrollTop() > 910) {
       $('#suzie').css({ 'opacity': '1' });
@@ -206,6 +225,21 @@ $(document).ready(function() {
     } else {
       $('#suziesfriends').css({ 'opacity': '0' });
     }
+
+    /*MIKE LAST*/
+    if ($(this).scrollTop() > 4000) {
+      $('#mike2').css({ 'opacity': '1' });
+    } else {
+      $('#mike2').css({ 'opacity': '0' });
+    }
+
+    /*REWARD*/
+    if ($(this).scrollTop() > 4400) {
+      $('#reward').css({ 'opacity': '1' });
+    } else {
+      $('#reward').css({ 'opacity': '0' });
+    }
+
   });
 
   /* SHOW/HIDE/POSITION TEXT CONTENT */
@@ -257,6 +291,16 @@ $(document).ready(function() {
       mymessage4.css({'position': 'fixed', 'top': '130px'});
     } else {
       mymessage4.fadeOut('200')
+    }
+
+    /* STEP FIVE */
+  	var mymessage5 = $('#mikereward');
+    if ($(this).scrollTop() > 4300) {
+      mymessage5.fadeIn('500');
+      mymessage5.css({'position': 'fixed', 'top': '130px'});
+    } else {
+      mymessage5.fadeOut('200')
+      mymessage5.css({'position': 'absolute', 'top': '0px'});
     }
   });
   // function isScrolledIntoView(elem) {

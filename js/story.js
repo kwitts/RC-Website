@@ -2,14 +2,15 @@
 /*-- "Mike Makes a Purchase" --*/
 
 /*--LOADER IMG--*/
-// $(window).load(function() {
-// 	$(".loader").fadeOut("slow");
-// })
+$(window).load(function() {
+	$(".loader").fadeOut("slow");
+})
 
 /*DEV PURPOSES ONLY*/
-$(document).scroll(function() {
-    console.log($(document).scrollTop());
-})
+//this shows how far down the page you've scrolled in the console. Uncomment to debug animation transition issues.
+// $(document).scroll(function() {
+//     console.log($(document).scrollTop());
+// })
 
 /*--SCROLL ANIMATIONS ON DOC LOAD--*/
 $(document).ready(function() {
@@ -303,31 +304,4 @@ $(document).ready(function() {
       mymessage5.css({'position': 'absolute', 'top': '0px'});
     }
   });
-  // function isScrolledIntoView(elem) {
-	//     var docViewTop = $(window).scrollTop();
-	//     var docViewBottom = docViewTop + $(window).height();
-  //
-	//     var elemTop = $(elem).offset().top;
-	//     var elemBottom = elemTop + $(elem).height();
-  //
-	//     return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom));
-	// 	}
-  //
-	// var myelement = $('#cloud6');
-	// var mymessage = $('#description');
-	// $(window).scroll(function() {
-  //   if(isScrolledIntoView(myelement)) {
-  //       mymessage.fadeIn('500');
-  //   } else {
-  //       mymessage.fadeOut('200')
-  //   }
-  //
-  // var myelement1 = $('#hill');
-  // var mymessage1 = $('#red');
-  //   if(isScrolledIntoView(myelement1)) {
-  //     mymessage1.fadeIn('500');
-  //   } else {
-  //     mymessage1.fadeOut('200')
-  //   }
-  // });
 });

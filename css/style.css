@@ -1056,59 +1056,120 @@ input {
   height: 600px;
   position: relative;
 }
-#stepone #mike {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  -webkit-transform: translateX(0) scale(1);
-          transform: translateX(0) scale(1);
-  transition: opacity .3s, background .5s, transform 1s;
-  background: url('../images/mike_01.png');
-  background-repeat: no-repeat;
-  width: 216px;
-  height: 375px;
-}
+  #stepone #mike {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    -webkit-transform: translateX(0) scale(1);
+            transform: translateX(0) scale(1);
+    transition: opacity .3s, background .5s, transform 1s;
+    background: url('../images/mike_01.png');
+    background-repeat: no-repeat;
+    width: 216px;
+    height: 375px;
+  }
 #steptwo {
-  height: 2000px;
+  height: 1000px;
   position: relative;
 }
-#steptwo #suzie{
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  -webkit-transform: translateX(150px) scale(0.8);
-          transform: translateX(150px) scale(0.8);
-  transition: opacity .3s, background .5s, transform 1s;
-  background: url('../images/suzie_01.png');
-  background-repeat: no-repeat;
-  width: 216px;
-  height: 375px;
+  #steptwo #suzie{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    -webkit-transform: translateX(150px) scale(0.8);
+            transform: translateX(150px) scale(0.8);
+    transition: opacity .3s, background .5s, transform 1s;
+    background: url('../images/suzie_01.png');
+    background-repeat: no-repeat;
+    width: 216px;
+    height: 375px;
+  }
+  #steptwo #mikesfriends{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    -webkit-transform: translateX(120px) scale(0.8);
+            transform: translateX(120px) scale(0.8);
+    transition: opacity .3s, background .5s, transform 1s;
+  }
+  #steptwo #plane-right {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    opacity: 0;
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+    transition: opacity .3s, background .5s, transform 1s;
+    background: url('../images/referral_01.png');
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+  }
+#stepthree {
+  height: 1500px;
+  position: relative;
 }
-#steptwo #mikesfriends{
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  margin: 0 auto;
-  -webkit-transform: translateX(120px) scale(0.8);
-          transform: translateX(120px) scale(0.8);
+  #stepthree #plane-referral {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    opacity: 0;
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+    transition: opacity .3s, background .5s, transform 1s;
+    background: url('../images/referral_01.png');
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+  }
+#stepfour {
+  height: 1300px;
+  position: relative;
 }
-#steptwo #plane-right {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  opacity: 0;
-  -webkit-transform: translateX(-150px);
-          transform: translateX(-150px);
-  transition: opacity .3s, background .5s, transform 1s;
-  background: url('../images/referral_01.png');
-  background-repeat: no-repeat;
-  width: 100px;
-  height: 100px;
+  #stepfour #suziesfriends{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    -webkit-transform: translateX(120px) scale(0.8);
+            transform: translateX(120px) scale(0.8);
+    transition: opacity .3s, background .5s, transform 1s;
+  }
+  #stepfour #plane-right2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    opacity: 0;
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+    transition: opacity .3s, background .5s, transform 1s;
+    background: url('../images/referral_01.png');
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+  }
+#stepfive {
+  height: 600px;
+  position: relative;
 }
+  #stepfive #reward {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    -webkit-transform: translateX(250px) scale(0.8);
+            transform: translateX(250px) scale(0.8);
+    transition: transform 1s;
+  }
 
 
 /*Request Info*/

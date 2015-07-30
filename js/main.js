@@ -206,5 +206,5 @@ $(document).ready(function() {
       $(this).animate({'width': number + '%'}, 1000);
     });
   });
-  
+
 });

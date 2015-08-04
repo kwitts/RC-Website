@@ -466,7 +466,7 @@ input {
 .tech-scroll {
   background: url(../images/tech-scroll.png) center top repeat-y;
   width: 100%;
-  text-align: center;
+  text-align: left;
   padding: 0;
   padding-top: 30px;
   margin: 0;
@@ -486,6 +486,7 @@ input {
   background: transparent;
   border: 0px;
   height: 56px;
+  text-align: center;
 }
 .tech-scroll .pop img {
   float: none;
@@ -501,7 +502,7 @@ input {
   border: 5px solid;
   background: #E9E9EA;
   margin: 0 auto;
-  padding: 0 0 10px;
+  padding: 0 10px 10px;
 }
 .tech-scroll .pop h3 {
   padding: 10px 0 0;
@@ -1266,8 +1267,6 @@ input {
   background: url(../images/requestbg.png) no-repeat center center;
 }
 
-label.error { width: 250px; display: inline; color: red;}
-
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -1553,7 +1552,7 @@ label.error { width: 250px; display: inline; color: red;}
     padding: 30px 20px;
   }
   .tech-scroll .pop:nth-child(odd) {
-    margin-left: 100px;
+    margin-left: 110px;
   }
   .tech-scroll .pop:nth-child(odd) img, .tech-scroll .pop:nth-child(odd) div {
     float: right;
@@ -1566,7 +1565,7 @@ label.error { width: 250px; display: inline; color: red;}
     width: 78%;
   }
   .tech-scroll .pop:nth-child(even) {
-    margin-right: 100px;
+    margin-right: 110px;
   }
   .tech-scroll .pop:nth-child(even) img, .tech-scroll .pop:nth-child(even) div {
     float: left;
@@ -1580,6 +1579,7 @@ label.error { width: 250px; display: inline; color: red;}
   }
   .tech-scroll .pop:last-child {
     margin: 0 auto;
+    text-align: center;
   }
   .modal {
     padding: 20px;

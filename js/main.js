@@ -99,34 +99,58 @@ $(document).ready(function() {
 });
 
  /*form submit*/
-$(function() {
-    $('form').submit(function() {
-        $.ajax({
-            type: 'POST',
-            url: 'http://kristiwitts.com/clients/refclix/email-handler.php',
-            data: { email: $(this).email.value },
-            success: function(data) {
-                alert('Message sent!');
-            }
-        });
-        return false;
-    });
-})
+// function sendForm() {
+//   $.ajax({
+//     type: 'POST',
+//     url: 'http://kristiwitts.com/clients/refclix/email-handler.php',
+//     data: { email: $(this).email.value },
+//     success: function(data) {
+//         alert('Message sent!');
+//     }
+//   });
+//   return false;
+// });
+
+// var frm = $('#requestform');
+//     frm.submit(function (ev) {
+//         $.ajax({
+//             type: frm.attr('method'),
+//             url: frm.attr('action'),
+//             data: frm.serialize(),
+//             success: function (data) {
+//                 alert('ok');
+//             }
+//         });
+//
+//         ev.preventDefault();
+//     });
+
+// $(document).ready(function(){
+// 		$("#requestform").validate({
+// 			debug: false,
+// 			rules: {
+// 				email: {
+// 					required: true,
+// 					email: true
+// 				}
+// 			},
+// 			messages: {
+// 				email: "A valid email will help us get in touch with you.",
+// 			},
+// 			submitHandler: function(form) {
+// 				// do other stuff for a valid form
+// 				$.post('http://kristiwitts.com/clients/refclix/email-handler.php', $("#requestform").serialize(), function(data) {
+// 					$('#results').html(data);
+// 				});
+// 			}
+// 		});
+// 	});
 
 /*-- HOMEPAGE --*/
 $(document).ready(function() {
   /*testimonials/quotes slider*/
   $('.testimonials-slider').bxSlider({
     auto: true
-  });
-
-  /*marketers slideout information*/
-  $('.slideout-btn').click(function(e) {
-    $(this).parent().toggleClass('showslide');
-    $(this).parent().children('.content').fadeToggle('fast');
-    $(this).parent().prev().fadeToggle('fast');
-    $(this).toggleClass('active');
-    e.preventDefault();
   });
 
   // /*bar graph animation*/
@@ -185,8 +209,7 @@ $(document).ready(function() {
   });
 });
 
-/*-- HOW IT WORKS PAGE --*/
-/*-- (minus "mike makes a purchase", see story.js) --*/
+/*-- FEATURES PAGE --*/
 $(document).ready(function() {
 
   /*spinning referral funnel*/
@@ -196,6 +219,15 @@ $(document).ready(function() {
     $('.bottom1').delay(2600).animate({opacity:'1'},1000);
     $('.bottom2').delay(2800).animate({opacity:'1'},1000);
     $('.bottom3').delay(2900).animate({opacity:'1'},1000);
+  });
+
+  /*marketers slideout information*/
+  $('.slideout-btn').click(function(e) {
+    $(this).parent().toggleClass('showslide');
+    $(this).parent().children('.content').fadeToggle('fast');
+    $(this).parent().prev().fadeToggle('fast');
+    $(this).toggleClass('active');
+    e.preventDefault();
   });
 
 });

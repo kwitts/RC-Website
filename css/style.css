@@ -1266,6 +1266,8 @@ input {
   background: url(../images/requestbg.png) no-repeat center center;
 }
 
+label.error { width: 250px; display: inline; color: red;}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */

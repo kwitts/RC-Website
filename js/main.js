@@ -85,7 +85,7 @@ $(document).ready(function() {
     e.preventDefault();
   });
 
-  /*request info modal popup*/
+  /*request modal popup*/
   $('.infopop').click(function(e){
     $('#request').fadeIn("slow");
     $('.overlay').fadeIn("slow");
@@ -96,6 +96,25 @@ $(document).ready(function() {
     $('.overlay').fadeOut("slow");
     e.preventDefault();
   });
+
+  /*validate form*/
+  $("#requestform").validate({
+			debug: false,
+			rules: {
+				email: {
+					required: true,
+					email: true
+				}
+			},
+			messages: {
+				email: "A valid email will help us get in touch with you.",
+			},
+			submitHandler: function(form) {
+				$.post('email-handler.php', $("#requestform").serialize(), function(data) {
+					$('#requestsuccess').html(data);
+				});
+			}
+		});
 });
 
 /*-- HOMEPAGE --*/

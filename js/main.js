@@ -96,26 +96,22 @@ $(document).ready(function() {
     $('.overlay').fadeOut("slow");
     e.preventDefault();
   });
-
-  /*validate form*/
-  $("#requestform").validate({
-			debug: false,
-			rules: {
-				email: {
-					required: true,
-					email: true
-				}
-			},
-			messages: {
-				email: "A valid email will help us get in touch with you.",
-			},
-			submitHandler: function(form) {
-				$.post('email-handler.php', $("#requestform").serialize(), function(data) {
-					$('#requestsuccess').html(data);
-				});
-			}
-		});
 });
+
+ /*form submit*/
+$(function() {
+    $('form').submit(function() {
+        $.ajax({
+            type: 'POST',
+            url: 'http://kristiwitts.com/clients/refclix/email-handler.php',
+            data: { email: $(this).email.value },
+            success: function(data) {
+                alert('Message sent!');
+            }
+        });
+        return false;
+    });
+})
 
 /*-- HOMEPAGE --*/
 $(document).ready(function() {

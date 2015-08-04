@@ -1,3 +1,7 @@
 <?php
-	print "Form submitted successfully: Your email is <b>".$_POST['email']."</b><br>";
-?>
+    $to = $_POST["email"];
+    $subject = "Test mail";
+    $from = "address@someisp.com";
+    $headers = "From:" . $from;
+    mail($to, $headers);
+?> 

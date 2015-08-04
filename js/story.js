@@ -8,9 +8,9 @@ $(window).load(function() {
 
 /*DEV PURPOSES ONLY*/
 //this shows how far down the page you've scrolled in the console. Uncomment to debug animation transition issues.
-// $(document).scroll(function() {
-//     console.log($(document).scrollTop());
-// })
+$(document).scroll(function() {
+    console.log($(document).scrollTop());
+})
 
 /*--SCROLL ANIMATIONS ON DOC LOAD--*/
 $(document).ready(function() {
@@ -117,7 +117,9 @@ $(document).ready(function() {
    }
 
    /* MIKE - Step Five */
-   if ($(this).scrollTop() > 4315) {
+	 if ($(this).scrollTop() > 4725) {
+     $('#mike2').css({ 'position': 'absolute', 'top': '420px' });
+   } else if ($(this).scrollTop() > 4315) {
      $('#mike2').css({ 'position': 'fixed', 'top': '220px' });
    } else {
      $('#mike2').css({ 'position': 'absolute', 'top': '0px' });
@@ -131,7 +133,9 @@ $(document).ready(function() {
    }
 
    /* REWARD - Step Five */
-   if ($(this).scrollTop() > 4315) {
+	 if ($(this).scrollTop() > 4725) {
+     $('#reward').css({ 'position': 'absolute', 'top': '420px' });
+   } else if ($(this).scrollTop() > 4315) {
      $('#reward').css({ 'position': 'fixed', 'top': '220px' });
    } else {
      $('#reward').css({ 'position': 'absolute', 'top': '0px' });
@@ -296,7 +300,10 @@ $(document).ready(function() {
 
     /* STEP FIVE */
   	var mymessage5 = $('#mikereward');
-    if ($(this).scrollTop() > 4300) {
+		if ($(this).scrollTop() > 4725) {
+			mymessage5.fadeOut('500');
+      mymessage5.css({ 'position': 'absolute', 'top': '350px' });
+    } else if ($(this).scrollTop() > 4300) {
       mymessage5.fadeIn('500');
       mymessage5.css({'position': 'fixed', 'top': '130px'});
     } else {

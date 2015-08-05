@@ -952,10 +952,7 @@ input {
   margin: 0;
   padding: 0;
 }
-.casestudy img {
-  width: 100%;
-}
-.socialbar {
+/*.socialbar {
   list-style: none;
   width: 100%;
   margin: 0;
@@ -998,7 +995,7 @@ input {
 .socialbar li.bar-twitter {
   background: #10A7DD;
   width: 0%;
-}
+}*/
 
 /*Funnel*/
 
@@ -1011,7 +1008,7 @@ input {
 .page-title.features section img {
   width: 100%;
 }
-/*funnels*/
+/*funnel*/
 .funnel {
   position: relative;
   overflow: hidden;

@@ -954,10 +954,27 @@ input {
 }
 .page-title.analytics .insightsinfo .metrics {
   list-style: none;
-  color: #666;
+  color: #e9e9ea;
   font-size: .8em;
+  font-weight: 700;
   margin: 0;
   padding: 0;
+}
+.page-title.analytics .insightsinfo .metrics li {
+  display: block;
+  margin: 0 auto;
+}
+.page-title.analytics .insightsinfo .metrics li.ok {
+  background: #0079c1;
+  width: 50%;
+}
+.page-title.analytics .insightsinfo .metrics li.good {
+  background: #f77c63;
+  width: 75%;
+}
+.page-title.analytics .insightsinfo .metrics li.great {
+  background: #20b7ac;
+
 }
 /*.socialbar {
   list-style: none;
@@ -1617,6 +1634,11 @@ input {
   }
 
   .page-title.features section {
+    margin-bottom: 0;
+  }
+
+
+  .page-title.analytics header {
     margin-bottom: 0;
   }
 }

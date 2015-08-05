@@ -246,12 +246,5 @@ $(document).ready(function() {
     $('.' + thisid).show();
     e.preventDefault();
   });
-  $('#insights_02').click(function() {
-    $(".socialbar li").each(function(key, bar) {
-      var number = $(this).data('number');
-
-      $(this).animate({'width': number + '%'}, 1000);
-    });
-  });
-
+  
 });

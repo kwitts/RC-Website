@@ -34,6 +34,15 @@ $(document).ready(function() {
       $('#mike').css({ '-webkit-transform': 'translateX(0) scale(1)' });
     }
 
+		/* DESK - Step One, Step Three*/
+		if ($(this).scrollTop() > 3800) {
+      $('#desk').css({ 'position': 'absolute', 'top': '3010px' });
+    } else if ($(this).scrollTop() > 195) {
+      $('#desk').css({ 'position': 'fixed', 'top': '220px' });
+    } else {
+      $('#desk').css({ 'position': 'absolute', 'top': '0px' });
+    }
+
     /* SUZIE - Step Two, Three, and Four */
     if ($(this).scrollTop() > 3800) {
       $('#suzie').css({ 'position': 'absolute', 'top': '3010px' });
@@ -189,6 +198,19 @@ $(document).ready(function() {
     } else {
       $('#suzie').css({ 'opacity': '0' });
     }
+
+		/* DESK - Step One, Step Three*/
+		if ($(this).scrollTop() > 3000) {
+			$('#desk').css({ 'opacity': '0' });
+		} else if ($(this).scrollTop() > 2300) {
+			$('#desk').css({ 'opacity': '1' });
+		} else if ($(this).scrollTop() > 700) {
+			$('#desk').css({ 'opacity': '0'});
+		} else if ($(this).scrollTop() > 195) {
+			$('#desk').css({ 'opacity': '1' });
+		} else {
+			$('#desk').css({ 'opacity': '0' });
+		}
 
     /*MIKE'S FRIENDS*/
     if ($(this).scrollTop() > 910) {

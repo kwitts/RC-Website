@@ -1121,6 +1121,19 @@ input {
     width: 216px;
     height: 375px;
   }
+  #stepone #desk {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    -webkit-transform: translateX(-100px) scale(0.8);
+            transform: translateX(-100px) scale(0.8);
+    transition: opacity .3s, background .5s, transform 1s;
+    background: url('../images/onlinepurchase.png');
+    background-repeat: no-repeat;
+    width: 420px;
+    height: 322px;
+  }
 #steptwo {
   height: 1000px;
   position: relative;

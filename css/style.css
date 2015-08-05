@@ -601,7 +601,16 @@ input {
 
 /*How Do Marketers...*/
 
-#marketers article section {
+.marketers section {
+  background: #e9e9ea;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  position: relative;
+  border-left: solid 10px #0079c1;
+}
+
+/*#marketers article section {
   margin-top: 30px;
   height: 160px;
   position: relative;
@@ -682,7 +691,7 @@ input {
 #marketers article section .slideout .slideout-btn:hover, #marketers article section .slideout .slideout-btn.active {
   /*background: url('../images/create-hover.png');*/
   background-position: -90px 0;
-}
+}*/
 
 /*Features*/
 

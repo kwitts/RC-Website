@@ -1131,6 +1131,7 @@ input {
     transition: opacity .3s, background .5s, transform 1s;
     background: url('../images/onlinepurchase.png');
     background-repeat: no-repeat;
+    opacity: 0;
     width: 420px;
     height: 322px;
   }

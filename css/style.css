@@ -1004,22 +1004,25 @@ input {
 }
 .page-title.features section {
   text-align: center !important;
+  margin-bottom: 30px;
 }
-.page-title.features section img {
+/*.page-title.features section img {
   width: 100%;
-}
+}*/
 /*funnel*/
 .funnel {
   position: relative;
   overflow: hidden;
+  max-width: 276px;
+  margin: 0 auto;
 }
-.funnel .hide, .funnel .top, .funnel .funnelspin, .funnel .bottom1, .funnel .bottom2, .funnel .bottom3 {
+.funnel .hide, .funnel .top, .funnel .funnelspin, .funnel .bottom1, .funnel .bottom2 {
   width: 100%;
 }
 .funnel .hide {
   opacity: 0;
 }
-.funnel .top, .funnel .bottom1, .funnel .bottom2, .funnel .bottom3 {
+.funnel .top, .funnel .bottom1, .funnel .bottom2 {
   opacity: 0;
   position: absolute;
   left: 0;
@@ -1037,7 +1040,7 @@ input {
 }
 .funnel .funnelspin {
   position: absolute;
-  top: 24.93%;
+  top: 29.35%;
   left: 0;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -1050,8 +1053,8 @@ input {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
-.funnel .bottom1, .funnel .bottom2, .funnel .bottom3 {
-  top: 73.28%;
+.funnel .bottom1, .funnel .bottom2 {
+  top: 76.1%;
 }
 
 /* Mike's Story*/
@@ -1330,7 +1333,6 @@ input {
   }
 
 
-
 }
 @media only screen and (min-width: 768px) {
   /* ============
@@ -1591,6 +1593,10 @@ input {
   }
   .modal h1 {
     font-size: 2.4em;
+  }
+
+  .page-title.features section {
+    margin-bottom: 0;
   }
 }
 

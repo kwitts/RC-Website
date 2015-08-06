@@ -128,7 +128,9 @@ article {
 article header {
   margin-bottom: 20px;
 }
-
+video {
+  max-width: 100%;
+}
 /* ==============
     MOBILE: Menu
    ============== */
@@ -608,89 +610,6 @@ input {
   border-left: solid 10px #0079c1;
 }
 
-/*#marketers article section {
-  margin-top: 30px;
-  height: 160px;
-  position: relative;
-}
-#marketers article section .slideleft {
-  background: #0097B8;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: -100%;
-}
-#marketers article section h2 {
-  text-align: left;
-  font-weight: 400;
-  position: relative;
-  padding-left: 100px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.25em;
-  color: #0067A3;
-}
-#marketers article section .slideout {
-  background: #0097B8;
-  color: #ECEDEF;
-  position: absolute;
-  top: 0;
-  right: 100%;
-  width: 100%;
-  height: 160px;
-  padding: 10px 10px;
-  margin-right: -100px;
-  -webkit-transition: margin-right 1s, right 1s;
-  transition: margin-right 1s, right 1s;
-  box-sizing: border-box;
-  text-align: left;
-  font-size: .8em;
-  border-radius: 0 80px 80px 0;
-  animation: move 3s ease infinite;
-}
-#marketers article section .slideout.showslide {
-  right: 0;
-  margin-right: 0;
-}
-#marketers article section .slideout .content {
-  display: none;
-  padding-right: 70px;
-  word-break: keep-all;
-}
-#marketers article section .slideout .content h4 {
-  padding: 0;
-  margin: 0;
-  font-weight: 300;
-  font-size: 1em;
-  line-height: 1.2em;
-  padding-bottom: 3px;
-}
-#marketers article section .slideout .content p {
-  padding: 0;
-  margin: 0;
-  line-height: 1.2em;
-}
-#marketers article section .slideout img {
-
-}
-#marketers article section .slideout .slideout-btn {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  margin-top: -45px;
-  cursor: pointer;
-  width: 90px;
-  height: 90px;
-  background: url('../images/create-sprites.png');
-  background-position: 0 0;
-  background-size: auto 100%;
-}
-#marketers article section .slideout .slideout-btn:hover, #marketers article section .slideout .slideout-btn.active {
-  /*background: url('../images/create-hover.png');*/
-  background-position: -90px 0;
-}*/
-
 /*Features*/
 
 .page-title.features {
@@ -976,50 +895,6 @@ input {
   background: #20b7ac;
 
 }
-/*.socialbar {
-  list-style: none;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-.socialbar li {
-  display: block;
-  float: left;
-  height: 70px;
-  color: #ffffff;
-  font-weight: 700;
-  text-align: center !important;
-  text-transform: uppercase;
-  position: relative;
-  overflow: hidden;
-}
-.socialbar li i {
-  font-size: 6em;
-  position: absolute;
-  opacity: .4;
-  right: -5px;
-  top: -12px;
-}
-.socialbar li label {
-  clear: both;
-  font-size: .8em;
-}
-.socialbar li p {
-  font-size: 1.9em !important;
-}
-.socialbar li.bar-email {
-  background: #20b7ac;
-  width: 0%;
-}
-.socialbar li.bar-facebook {
-  background: #3A5A8F;
-  width: 0%;
-}
-.socialbar li.bar-twitter {
-  background: #10A7DD;
-  width: 0%;
-}*/
 
 /*Funnel*/
 

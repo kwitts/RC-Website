@@ -98,77 +98,12 @@ $(document).ready(function() {
   });
 });
 
- /*form submit*/
-// function sendForm() {
-//   $.ajax({
-//     type: 'POST',
-//     url: 'http://kristiwitts.com/clients/refclix/email-handler.php',
-//     data: { email: $(this).email.value },
-//     success: function(data) {
-//         alert('Message sent!');
-//     }
-//   });
-//   return false;
-// });
-
-// var frm = $('#requestform');
-//     frm.submit(function (ev) {
-//         $.ajax({
-//             type: frm.attr('method'),
-//             url: frm.attr('action'),
-//             data: frm.serialize(),
-//             success: function (data) {
-//                 alert('ok');
-//             }
-//         });
-//
-//         ev.preventDefault();
-//     });
-
-// $(document).ready(function(){
-// 		$("#requestform").validate({
-// 			debug: false,
-// 			rules: {
-// 				email: {
-// 					required: true,
-// 					email: true
-// 				}
-// 			},
-// 			messages: {
-// 				email: "A valid email will help us get in touch with you.",
-// 			},
-// 			submitHandler: function(form) {
-// 				// do other stuff for a valid form
-// 				$.post('http://kristiwitts.com/clients/refclix/email-handler.php', $("#requestform").serialize(), function(data) {
-// 					$('#results').html(data);
-// 				});
-// 			}
-// 		});
-// 	});
-
 /*-- HOMEPAGE --*/
 $(document).ready(function() {
   /*testimonials/quotes slider*/
   $('.testimonials-slider').bxSlider({
     auto: true
   });
-
-  // /*bar graph animation*/
-  // $('.bars').bind('inview', function(event, visible) {
-  //   if (visible == true) {
-  //     $(function() {
-  //       $(".bars li .bar").each(function(key, bar) {
-  //         var number = $(this).data('number');
-  //
-  //         $(this).animate({
-  //           'height': number * 10
-  //         }, 1000).delay(500);
-  //       });
-  //     });
-  //   } else {
-  //     // element has gone out of viewport
-  //   }
-  // });
 
   /*venn diagram*/
   $('.venn-sec').click(function(e) {
@@ -246,5 +181,5 @@ $(document).ready(function() {
     $('.' + thisid).show();
     e.preventDefault();
   });
-  
+
 });

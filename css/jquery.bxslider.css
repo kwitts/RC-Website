@@ -31,7 +31,7 @@
 
 .bx-wrapper .bx-viewport {
 	left: -5px;
-	
+
 	/*fix other elements on the page moving (on Chrome)*/
 	-webkit-transform: translatez(0);
 	-moz-transform: translatez(0);
@@ -125,6 +125,7 @@
 	height: 32px;
 	text-indent: -9999px;
 	z-index: 9999;
+	display: none;
 }
 
 .bx-wrapper .bx-controls-direction a.disabled {

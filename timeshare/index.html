@@ -81,8 +81,10 @@
         <header>
           <h1 class="white-text">REQUEST INFORMATION OR A DEMO</h1>
           <p class="white-text">Enter your email below to request more information about ReferralClix and what referral marketing can do for you.</p>
-          <input type="email" name="email" autocomplete="on" placeholder="yourname@domain.com" required /><br/>
-          <button type="submit" class="button reg" style="margin:20px auto;">Send Request</button>
+          <form name="requestform" id="requestform" method="post">
+            <input type="email" name="email" id="email" autocomplete="on" placeholder="yourname@domain.com" required /><br/>
+            <input type="submit" class="button reg" style="margin:20px auto;" value="Send Request"/>
+          </form>
           <a href="#" class="close">CLOSE</a>
         </header>
       </article>

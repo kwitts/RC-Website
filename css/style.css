@@ -619,19 +619,12 @@ input {
 
 /*Features*/
 
-.page-title.features {
+.features {
   background: #2B3849;
+  color: #e9e9ea;
 }
-.page-title.features header {
-  margin: 0 auto;
-}
-.page-title.features .path {
-  background: #E9E9Ea;
-  text-align: center;
-}
-.page-title.features .path img {
-  width: 100%;
-  max-width: 800px;
+.features h4, .features p, .features section {
+  text-align: center !important;
 }
 .featurelist section {
   text-align: center !important;

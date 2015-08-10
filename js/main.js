@@ -181,34 +181,35 @@ $(document).ready(function() {
     e.preventDefault();
   });
 
-  /*pathway scroll pop-in information*/
-  $(window).scroll(function(event) {
-
-    $(".pop").each(function(i, el) {
-      var el = $(el);
-      if (el.visible(true)) {
-        el.addClass("come-in");
-      }
-    });
-
+  /*funnel*/
+  $('.funnelspin').bind('inview', function(event, isInView, visiblePartX, visiblePartY) {
+    if (isInView) {
+      $(this).addClass('flip');
+      $('.top').addClass('drop');
+      $('.bottom1').delay(2600).animate({opacity:'1'},1000);
+      $('.bottom2').delay(2800).animate({opacity:'1'},1000);
+      $('.bottom3').delay(2900).animate({opacity:'1'},1000);
+    } else {
+      // element has gone out of viewport
+    }
   });
+
+  // /*pathway scroll pop-in information*/
+  // $(window).scroll(function(event) {
+  //
+  //   $(".pop").each(function(i, el) {
+  //     var el = $(el);
+  //     if (el.visible(true)) {
+  //       el.addClass("come-in");
+  //     }
+  //   });
+  //
+  // });
+
 });
 
 /*-- FEATURES PAGE --*/
 $(document).ready(function() {
-
-
-  $('.funnelspin').bind('inview', function(event, isInView, visiblePartX, visiblePartY) {
-  if (isInView) {
-    $(this).addClass('flip');
-    $('.top').addClass('drop');
-    $('.bottom1').delay(2600).animate({opacity:'1'},1000);
-    $('.bottom2').delay(2800).animate({opacity:'1'},1000);
-    $('.bottom3').delay(2900).animate({opacity:'1'},1000);
-  } else {
-    // element has gone out of viewport
-  }
-});
 
   /*marketers slideout information*/
   $('.slideout-btn').click(function(e) {

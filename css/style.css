@@ -427,7 +427,7 @@ input {
   text-align: center;
   font-size: .7em;
   -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .citation {
   font-style: italic;
@@ -524,11 +524,20 @@ input {
   color: #20B7AC;
 }
 .come-in {
-  transform: translateY(150px);
-  animation: come-in 800ms ease forwards;
-  animation-delay: 300ms;
+  -webkit-transform: translateY(150px);
+          transform: translateY(150px);
+  -webkit-animation: come-in 800ms ease forwards;
+          animation: come-in 800ms ease forwards;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
 }
 
+@-webkit-keyframes come-in {
+  to { -webkit-transform: translateY(0); }
+  0% { opacity: 0; }
+  1% { opacity: 0; }
+100% { opacity: 1; }
+}
 @keyframes come-in {
   to { transform: translateY(0); }
   0% { opacity: 0; }
@@ -595,9 +604,6 @@ input {
   font-size: 1.5em;
   font-weight: 700;
 }
-
-/*Mike Makes a Purchase*/
-
 
 /*How Do Marketers...*/
 
@@ -745,9 +751,9 @@ input {
 }
 
 @-webkit-keyframes pulse {
-    0% { -webkit-transform: scale(.85); -webkit-opacity: .6; }
-    50% { -webkit-transform: scale(1); -webkit-opacity: 1; }
-    100% { -webkit-transform: scale(.85); -webkit-opacity: .6; }
+    0% { -webkit-transform: scale(.85); opacity: .6; }
+    50% { -webkit-transform: scale(1); opacity: 1; }
+    100% { -webkit-transform: scale(.85); opacity: .6; }
 }
 @keyframes pulse {
     0% { transform: scale(.85); opacity: .6; }
@@ -990,9 +996,12 @@ input {
 #story figure{
   filter: none;
   -webkit-filter: blur(0px);
-  -moz-filter: blur(0px);
-  -ms-filter: blur(0px);
+     -moz-filter: blur(0px);
+      -ms-filter: blur(0px);
   filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');
+  -webkit-transform: translate3d(0,0,0);
+          transform: translate3d(0,0,0);
+
 }
 /*Step One*/
 #stepone {
@@ -1006,7 +1015,8 @@ input {
     margin: 0 auto;
     -webkit-transform: translateX(0) scale(1);
             transform: translateX(0) scale(1);
-    transition: opacity .3s, background .5s, transform 1s;
+    -webkit-transition: opacity .3s, background .5s, -webkit-transform 1s;
+            transition: opacity .3s, background .5s, transform 1s;
     background: url('../images/mike_01.png');
     background-repeat: no-repeat;
     width: 216px;
@@ -1019,7 +1029,8 @@ input {
     margin: 0 auto;
     -webkit-transform: translateX(-100px) scale(0.8);
             transform: translateX(-100px) scale(0.8);
-    transition: opacity .3s, background .5s, transform 1s;
+    -webkit-transition: opacity .3s, background .5s, -webkit-transform 1s;
+            transition: opacity .3s, background .5s, transform 1s;
     background: url('../images/onlinepurchase.png');
     background-repeat: no-repeat;
     opacity: 0;
@@ -1037,7 +1048,8 @@ input {
     margin: 0 auto;
     -webkit-transform: translateX(150px) scale(0.8);
             transform: translateX(150px) scale(0.8);
-    transition: opacity .3s, background .5s, transform 1s;
+    -webkit-transition: opacity .3s, background .5s, -webkit-transform 1s;
+            transition: opacity .3s, background .5s, transform 1s;
     background: url('../images/suzie_01.png');
     background-repeat: no-repeat;
     width: 216px;
@@ -1051,7 +1063,8 @@ input {
     margin: 0 auto;
     -webkit-transform: translateX(120px) scale(0.8);
             transform: translateX(120px) scale(0.8);
-    transition: opacity .3s, background .5s, transform 1s;
+    -webkit-transition: opacity .3s, background .5s, -webkit-transform 1s;
+            transition: opacity .3s, background .5s, transform 1s;
   }
   #steptwo #plane-right {
     position: absolute;
@@ -1061,7 +1074,8 @@ input {
     opacity: 0;
     -webkit-transform: translateX(-150px);
             transform: translateX(-150px);
-    transition: opacity .3s, background .5s, transform 1s;
+    -webkit-transition: opacity .3s, background .5s, -webkit-transform 1s;
+            transition: opacity .3s, background .5s, transform 1s;
     background: url('../images/referral_01.png');
     background-repeat: no-repeat;
     width: 100px;
@@ -1079,7 +1093,8 @@ input {
     opacity: 0;
     -webkit-transform: translateX(-150px);
             transform: translateX(-150px);
-    transition: opacity .3s, background .5s, transform 1s;
+    -webkit-transition: opacity .3s, background .5s, -webkit-transform 1s;
+            transition: opacity .3s, background .5s, transform 1s;
     background: url('../images/referral_01.png');
     background-repeat: no-repeat;
     width: 100px;
@@ -1097,7 +1112,8 @@ input {
     margin: 0 auto;
     -webkit-transform: translateX(120px) scale(0.8);
             transform: translateX(120px) scale(0.8);
-    transition: opacity .3s, background .5s, transform 1s;
+    -webkit-transition: opacity .3s, background .5s, -webkit-transform 1s;
+            transition: opacity .3s, background .5s, transform 1s;
   }
   #stepfour #plane-right2 {
     position: absolute;
@@ -1107,7 +1123,8 @@ input {
     opacity: 0;
     -webkit-transform: translate(100px, -150px);
             transform: translate(100px, -150px);
-    transition: opacity .3s, background .5s, transform 1s;
+    -webkit-transition: opacity .3s, background .5s, -webkit-transform 1s;
+            transition: opacity .3s, background .5s, transform 1s;
     background: url('../images/referral_01.png');
     background-repeat: no-repeat;
     width: 100px;
@@ -1126,7 +1143,8 @@ input {
     opacity: 0;
     -webkit-transform: translateY(-100px) scale(0.8);
             transform: translateY(-100px) scale(0.8);
-    transition: transform 1s, opacity 1s;
+    -webkit-transition: all 1s;
+            transition: all 1s;
   }
   #stepfive #mike2 {
     position: absolute;
@@ -1135,7 +1153,8 @@ input {
     margin: 0 auto;
     -webkit-transform: translateX(-250px) scale(0.8);
             transform: translateX(-250px) scale(0.8);
-    transition: transform 1s, opacity 1s;
+    -webkit-transition: all 1s;
+            transition: all 1s;
     background: url('../images/mike_03.png');
     background-repeat: no-repeat;
     width: 216px;
@@ -1153,7 +1172,8 @@ input {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: 9999;
   display: none;
 }

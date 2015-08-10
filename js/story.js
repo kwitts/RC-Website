@@ -8,15 +8,22 @@ $(window).load(function() {
 
 /*DEV PURPOSES ONLY*/
 //this shows how far down the page you've scrolled in the console. Uncomment to debug animation transition issues.
-// $(document).scroll(function() {
-//     console.log($(document).scrollTop());
-// })
+$(document).scroll(function() {
+    console.log($(document).scrollTop());
+})
 
 /*--SCROLL ANIMATIONS ON DOC LOAD--*/
 $(document).ready(function() {
 
   /* SCROLL POSITIONS */
   $(window).scroll(function() {
+
+		/*ARROW*/
+		if ($(this).scrollTop() > 50) {
+      $('#arrow').css({ 'position': 'fixed', 'bottom': '20px', 'left': '50%', 'margin-left': '-30px' });
+    } else {
+      $('#arrow').css({ 'position': 'relative', 'bottom': '0', 'left': '0', 'margin-left': '0' });
+    }
 
     /* MIKE - Step One and Two */
     if ($(this).scrollTop() > 1400) {
@@ -46,7 +53,7 @@ $(document).ready(function() {
     /* SUZIE - Step Two, Three, and Four */
     if ($(this).scrollTop() > 3800) {
       $('#suzie').css({ 'position': 'absolute', 'top': '3010px' });
-    } else if ($(this).scrollTop() > 910) {
+    } else if ($(this).scrollTop() > 800) {
       $('#suzie').css({ 'position': 'fixed', 'top': '220px' });
     } else {
       $('#suzie').css({ 'position': 'absolute', 'top': '100px' });
@@ -68,7 +75,7 @@ $(document).ready(function() {
      /* MIKE'S FRIENDS - Step Two */
     if ($(this).scrollTop() > 1400) {
       $('#mikesfriends').css({ 'position': 'absolute', 'top': '510px' });
-    } else if ($(this).scrollTop() > 910) {
+    } else if ($(this).scrollTop() > 800) {
       $('#mikesfriends').css({ 'position': 'fixed', 'top': '120px' });
     } else {
       $('#mikesfriends').css({ 'position': 'absolute', 'top': '0px' });
@@ -166,7 +173,7 @@ $(document).ready(function() {
     /* MIKE - Step One */
     if ($(this).scrollTop() > 500) {
       $('#mike').css('background', 'url("../images/mike_03.png")');
-    } else if ($(this).scrollTop() > 350) {
+    } else if ($(this).scrollTop() > 320) {
       $('#mike').css('background', 'url("../images/mike_02.png")');
     } else {
       $('#mike').css('background', 'url("../images/mike_01.png")');
@@ -192,8 +199,16 @@ $(document).ready(function() {
 
   /* APPEAR/DISAPPEAR */
   $(window).scroll(function() {
-    /*MIKE*/
-    if ($(this).scrollTop() > 910) {
+
+		/*ARROW*/
+    if ($(this).scrollTop() > 4300) {
+      $('#arrow').css({ 'opacity': '0' });
+    } else {
+      $('#arrow').css({ 'opacity': '1' });
+    }
+
+    /*SUZIE*/
+    if ($(this).scrollTop() > 500) {
       $('#suzie').css({ 'opacity': '1' });
     } else {
       $('#suzie').css({ 'opacity': '0' });
@@ -213,7 +228,7 @@ $(document).ready(function() {
 		}
 
     /*MIKE'S FRIENDS*/
-    if ($(this).scrollTop() > 910) {
+    if ($(this).scrollTop() > 500) {
       $('#mikesfriends').css({ 'opacity': '1' });
     } else {
       $('#mikesfriends').css({ 'opacity': '0' });
@@ -323,8 +338,8 @@ $(document).ready(function() {
     /* STEP FIVE */
   	var mymessage5 = $('#mikereward');
 		if ($(this).scrollTop() > 4725) {
-			mymessage5.fadeOut('500');
-      mymessage5.css({ 'position': 'absolute', 'top': '350px' });
+			// mymessage5.fadeOut('500');
+      mymessage5.css({ 'position': 'absolute', 'top': '330px' });
     } else if ($(this).scrollTop() > 4300) {
       mymessage5.fadeIn('500');
       mymessage5.css({'position': 'fixed', 'top': '130px'});

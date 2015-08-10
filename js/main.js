@@ -2,80 +2,130 @@
 
 /*-- GLOBAL --*/
 /*inview scroll function*/
-(function($) {
-  function getViewportHeight() {
-    var height = window.innerHeight; // Safari, Opera
-    var mode = document.compatMode;
+(function ($) {
+  var inviewObjects = {}, viewportSize, viewportOffset,
+      d = document, w = window, documentElement = d.documentElement, expando = $.expando, timer;
 
-    if ((mode || !$.support.boxModel)) { // IE, Gecko
-      height = (mode == 'CSS1Compat') ?
-        document.documentElement.clientHeight : // Standards
-        document.body.clientHeight; // Quirks
+  $.event.special.inview = {
+    add: function(data) {
+      inviewObjects[data.guid + "-" + this[expando]] = { data: data, $element: $(this) };
+
+      // Use setInterval in order to also make sure this captures elements within
+      // "overflow:scroll" elements or elements that appeared in the dom tree due to
+      // dom manipulation and reflow
+      if (!timer && !$.isEmptyObject(inviewObjects)) {
+         timer = setInterval(checkInView, 250);
+      }
+    },
+
+    remove: function(data) {
+      try { delete inviewObjects[data.guid + "-" + this[expando]]; } catch(e) {}
+
+      // Clear interval when we no longer have any elements listening
+      if ($.isEmptyObject(inviewObjects)) {
+         clearInterval(timer);
+         timer = null;
+      }
     }
-    return height;
+  };
+
+  function getViewportSize() {
+    var mode, domObject, size = { height: w.innerHeight, width: w.innerWidth };
+
+    // if this is correct then return it
+    if (!size.height) {
+      mode = d.compatMode;
+      if (mode || !$.support.boxModel) { // IE, Gecko
+        domObject = mode === 'CSS1Compat' ?
+          documentElement : // Standards
+          d.body; // Quirks
+        size = {
+          height: domObject.clientHeight,
+          width:  domObject.clientWidth
+        };
+      }
+    }
+
+    return size;
   }
 
-  $(window).scroll(function() {
-    var vpH = getViewportHeight(),
-      scrolltop = (document.documentElement.scrollTop ?
-        document.documentElement.scrollTop :
-        document.body.scrollTop),
-      elems = [];
+  function getViewportOffset() {
+    return {
+      top:  w.pageYOffset || documentElement.scrollTop   || d.body.scrollTop,
+      left: w.pageXOffset || documentElement.scrollLeft  || d.body.scrollLeft
+    };
+  }
 
-    // naughty, but this is how it knows which elements to check for
-    $.each($.cache, function() {
-      if (this.events && this.events.inview) {
-        elems.push(this.handle.elem);
-      }
+  function checkInView() {
+    var $elements = [], elementsLength, i = 0;
+
+    $.each(inviewObjects, function(i, inviewObject) {
+      var selector  = inviewObject.data.selector,
+          $element  = inviewObject.$element;
+      $elements.push(selector ? $element.find(selector) : $element);
     });
 
-    if (elems.length) {
-      $(elems).each(function() {
-        var $el = $(this),
-          top = $el.offset().top,
-          height = $el.height(),
-          inview = $el.data('inview') || false;
+    elementsLength = $elements.length;
+    if (elementsLength) {
+      viewportSize   = viewportSize   || getViewportSize();
+      viewportOffset = viewportOffset || getViewportOffset();
 
-        if (scrolltop > (top + height) || scrolltop + vpH < top) {
-          if (inview) {
-            $el.data('inview', false);
-            $el.trigger('inview', [false]);
-          }
-        } else if (scrolltop < (top + height)) {
-          if (!inview) {
-            $el.data('inview', true);
-            $el.trigger('inview', [true]);
-          }
+      for (; i<elementsLength; i++) {
+        // Ignore elements that are not in the DOM tree
+        if (!$.contains(documentElement, $elements[i][0])) {
+          continue;
         }
-      });
+
+        var $element      = $($elements[i]),
+            elementSize   = { height: $element.height(), width: $element.width() },
+            elementOffset = $element.offset(),
+            inView        = $element.data('inview'),
+            visiblePartX,
+            visiblePartY,
+            visiblePartsMerged;
+
+        if (!viewportOffset || !viewportSize) {
+          return;
+        }
+
+        if (elementOffset.top + elementSize.height > viewportOffset.top &&
+            elementOffset.top < viewportOffset.top + viewportSize.height &&
+            elementOffset.left + elementSize.width > viewportOffset.left &&
+            elementOffset.left < viewportOffset.left + viewportSize.width) {
+          visiblePartX = (viewportOffset.left > elementOffset.left ?
+            'right' : (viewportOffset.left + viewportSize.width) < (elementOffset.left + elementSize.width) ?
+            'left' : 'both');
+          visiblePartY = (viewportOffset.top > elementOffset.top ?
+            'bottom' : (viewportOffset.top + viewportSize.height) < (elementOffset.top + elementSize.height) ?
+            'top' : 'both');
+          visiblePartsMerged = visiblePartX + "-" + visiblePartY;
+          if (!inView || inView !== visiblePartsMerged) {
+            $element.data('inview', visiblePartsMerged).trigger('inview', [true, visiblePartX, visiblePartY]);
+          }
+        } else if (inView) {
+          $element.data('inview', false).trigger('inview', [false]);
+        }
+      }
     }
-  });
-  $(function() {
-    $(window).scroll();
-  });
-})(jQuery);
-(function($) {
-  $.fn.visible = function(partial) {
+  }
 
-      var $t            = $(this),
-          $w            = $(window),
-          viewTop       = $w.scrollTop(),
-          viewBottom    = viewTop + $w.height(),
-          _top          = $t.offset().top,
-          _bottom       = _top + $t.height(),
-          compareTop    = partial === true ? _bottom : _top,
-          compareBottom = partial === true ? _top : _bottom;
+  $(w).bind("scroll resize scrollstop", function() {
+    viewportSize = viewportOffset = null;
+  });
 
-    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
-  };
+  // IE < 9 scrolls to focused elements without firing the "scroll" event
+  if (!documentElement.addEventListener && documentElement.attachEvent) {
+    documentElement.attachEvent("onfocusin", function() {
+      viewportOffset = null;
+    });
+  }
 })(jQuery);
 
-
-var currentYear = (new Date).getFullYear();
 
 $(document).ready(function() {
 
   /*current year function - for copyright footer*/
+  var currentYear = (new Date).getFullYear();
   $(".year").text( (new Date).getFullYear() );
 
   /*mobile navigation menu icon*/
@@ -147,14 +197,18 @@ $(document).ready(function() {
 /*-- FEATURES PAGE --*/
 $(document).ready(function() {
 
-  /*spinning referral funnel*/
-  $('.funnelspin').load(function() {
+
+  $('.funnelspin').bind('inview', function(event, isInView, visiblePartX, visiblePartY) {
+  if (isInView) {
     $(this).addClass('flip');
     $('.top').addClass('drop');
     $('.bottom1').delay(2600).animate({opacity:'1'},1000);
     $('.bottom2').delay(2800).animate({opacity:'1'},1000);
     $('.bottom3').delay(2900).animate({opacity:'1'},1000);
-  });
+  } else {
+    // element has gone out of viewport
+  }
+});
 
   /*marketers slideout information*/
   $('.slideout-btn').click(function(e) {

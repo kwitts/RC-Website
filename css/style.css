@@ -309,6 +309,7 @@ input {
   padding-top: 110px;
   box-sizing: border-box;
   color: #ECEDEF;
+  border-bottom: none !important;
 }
 .page-title.home {
   background: url('../images/topbg.jpg') center center no-repeat;
@@ -630,6 +631,10 @@ input {
 }
 .features h4, .features p, .features section {
   text-align: center !important;
+}
+.features p {
+  margin: 0;
+  padding: 0 0 20px;
 }
 .featurelist section {
   text-align: center !important;

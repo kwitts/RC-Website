@@ -38,7 +38,15 @@ h2 {
 }
 h3 {
   color: #20B7AC;
+  font-size: 1.25em;
+}
+h4 {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  color: #20B7AC;
   font-size: 1em;
+  font-weight: 400;
+  line-height: 1.2em;
+  text-transform: uppercase;
 }
 .white-text {
   color: #E9E9EA;
@@ -436,8 +444,46 @@ input {
   float: right;
 }
 
+/*fundamentals*/
+.fundamentalsbg {
+  background: #0079c1;
+  background: url('../images/blueprint.png') no-repeat center center;
+  background-size: cover;
+  padding-top: 0;
+  border-bottom: 0;
+}
+.fundamentalsbg header {
+  background: rgba(233, 233, 234, 0.7);
+  padding: 20px 0;
+}
+.fundamentalsbg header h2 {
+  color: #0079c1;
+}
+.fundamentals h1 {
+  margin: 50px 0 50px;
+}
+.fundamentals .row {
+  margin-bottom: 50px;
+  overflow: hidden;
+  text-align: center;
+}
+.fundamentals img {
+  width: 120px;
+}
+.fundamentals h4 {
+  text-align: center;
+  color: #e9e9ea;
+}
+.fundamentals ul {
+  font-size: .8em;
+  line-height: 1.2em;
+  padding-left: 20px;
+  text-align: left;
+  color: #e9e9ea;
+}
+
 /*Not Just Tech*/
-.tech-header {
+/*.tech-header {
   background: #2B3849;
   color: #E9E9EA;
   margin: -20px 0 0;
@@ -509,7 +555,7 @@ input {
   padding: 10px 0 0;
 }
 .tech-scroll .pop ul {
-  /*padding-left: 0;*/
+  padding-left: 0;
   list-style: disc outside none;
 }
 .tech-scroll .pop:nth-child(odd) div {
@@ -544,7 +590,7 @@ input {
   0% { opacity: 0; }
   1% { opacity: 0; }
 100% { opacity: 1; }
-}
+}*/
 
 /*Why Implement*/
 
@@ -611,6 +657,12 @@ input {
   font-weight: 700;
 }
 
+/*Top Goals*/
+.topgoals h3{
+  padding: 15px 0;
+  color: #0079c1;
+  font-size: 1.1em;
+}
 /*How Do Marketers...*/
 
 .marketers section {

@@ -680,6 +680,10 @@ input {
 .features {
   background: #2B3849;
   color: #e9e9ea;
+  padding-bottom: 0;
+}
+.features header {
+  margin-bottom: 5px;
 }
 .features h4, .features p, .features section {
   text-align: center !important;
@@ -688,8 +692,29 @@ input {
   margin: 0;
   padding: 0 0 20px;
 }
+.features img {
+  width: 80%;
+}
 .featurelist section {
   text-align: center !important;
+}
+.featuredetails img {
+  margin: 0 auto 30px;
+  width: 100%;
+  max-width: 400px;
+}
+.featuredetails.hp img {
+  max-width: 200px;
+}
+.featuredetails .row {
+  overflow: hidden;
+  padding: 30px 0 0;
+}
+.featuredetails .border {
+  border-bottom: 1px solid #d9d9da;
+  width: 80%;
+  clear: both;
+  margin: 20px auto;
 }
 
 
@@ -1531,7 +1556,7 @@ input {
   .page-title.analytics h1 {
     font-size: 2.5em;
   }
-  .tech .pop-top {
+  /*.tech .pop-top {
     width: 60%;
     padding: 30px 20px;
   }
@@ -1564,7 +1589,7 @@ input {
   .tech-scroll .pop:last-child {
     margin: 0 auto;
     text-align: center;
-  }
+  }*/
   .modal {
     padding: 20px;
     transform: translate(-50%, -50%);
@@ -1575,6 +1600,18 @@ input {
 
   .page-title.features section {
     margin-bottom: 0;
+  }
+
+  .left, .right {
+    width: 47.5%;
+    margin-bottom: 30px;
+  }
+  .left {
+    margin-right: 5%;
+    float: left;
+  }
+  .right {
+    float: right;
   }
 
 

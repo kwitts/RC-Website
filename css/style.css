@@ -683,7 +683,7 @@ input {
   padding-bottom: 0;
 }
 .features header {
-  margin-bottom: 5px;
+  margin-bottom: 0;
 }
 .features h4, .features p, .features section {
   text-align: center !important;
@@ -879,6 +879,9 @@ input {
 }
 .page-title.analytics h1 {
   font-size: 1.9em;
+}
+.page-title.analytics h3 {
+  font-size: 1em;
 }
 .page-title.analytics section {
   margin-bottom: 0;

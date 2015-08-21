@@ -659,8 +659,8 @@ input {
 
 /*Top Goals*/
 .topgoals h3{
-  padding: 15px 0;
-  color: #0079c1;
+  padding: 20px 0;
+  color: #2b3849;
   font-size: 1.1em;
 }
 /*How Do Marketers...*/
@@ -692,7 +692,7 @@ input {
   margin: 0;
   padding: 0 0 20px;
 }
-.features img {
+.features .headerimg {
   width: 80%;
 }
 .featurelist section {

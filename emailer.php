@@ -4,7 +4,7 @@
 		date_default_timezone_set('America/Los_Angeles');
 		
 		$email      = $_POST['email'];
-		$recipients = "mfiroved@counselordirect.com";
+		$recipients = "rc-contact@hotbsoftware.com";
 		$subject    = "ReferralClix.com contact us request";
 		$now        = date("l, F jS Y g:i A T");
 		$headers    = 'From: noreply@referralclix.com' . "\r\n" . 'Reply-To: mark.witte@referralclix.com' . "\r\n" . 'X-Mailer: PHP/' . phpversion();

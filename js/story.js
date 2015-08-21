@@ -135,7 +135,7 @@ $(document).ready(function() {
    /* MIKE - Step Five */
 	 if ($(this).scrollTop() > 4725) {
      $('#mike2').css({ 'position': 'absolute', 'top': '420px' });
-   } else if ($(this).scrollTop() > 4315) {
+   } else if ($(this).scrollTop() > 4280) {
      $('#mike2').css({ 'position': 'fixed', 'top': '220px' });
    } else {
      $('#mike2').css({ 'position': 'absolute', 'top': '0px' });

@@ -483,114 +483,57 @@ input {
 }
 
 /*Not Just Tech*/
-/*.tech-header {
-  background: #2B3849;
-  color: #E9E9EA;
-  margin: -20px 0 0;
-  padding: 20px 0;
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000;
+	transform-style: preserve-3d;
 }
-.tech {
-  width: 100%;
-  margin: 0 auto;
-}
-.tech .pop-top {
-  width: 100%;
-  background: #E9E9EA;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 30px 10px;
-  box-sizing: border-box;
-  border: 10px solid #2B3849;
-  border-top: 0;
-  border-radius: 0 0 100px 100px;
-}
-.tech .pop-top img {
-  height: 100%;
-  width: auto;
-  max-height: 150px;
-  margin: 10px;
-}
-.tech-scroll {
-  background: url(../images/tech-scroll.png) center top repeat-y;
-  width: 100%;
-  text-align: left;
-  padding: 0;
-  padding-top: 30px;
-  margin: 0;
-  list-style: none;
-}
-.tech-scroll .pop {
-  margin: 0 auto 40px;
-  padding: 10px 5px 13px;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 450px;
-  overflow: hidden;
-  opacity: 0;
-}
-.tech-scroll .pop:last-child {
-  padding: 0;
-  background: transparent;
-  border: 0px;
-  height: 56px;
-  text-align: center;
-}
-.tech-scroll .pop img {
-  float: none;
-  margin-right: 0;
-  margin-bottom: 10px;
-  width: 80px;
-}
-.tech-scroll .pop div {
-  display: block;
-  float: none;
-  width: 100%;
-  box-sizing: border-box;
-  border: 5px solid;
-  background: #E9E9EA;
-  margin: 0 auto;
-  padding: 0 10px 10px;
-}
-.tech-scroll .pop h3 {
-  padding: 10px 0 0;
-}
-.tech-scroll .pop ul {
-  padding-left: 0;
-  list-style: disc outside none;
-}
-.tech-scroll .pop:nth-child(odd) div {
-  border-color: #0079C1;
-}
-.tech-scroll .pop:nth-child(even) div {
-  border-color: #20B7AC;
-}
-.tech-scroll .pop:nth-child(odd) h3 {
-  color: #0079C1;
-}
-.tech-scroll .pop:nth-child(even) h3 {
-  color: #20B7AC;
-}
-.come-in {
-  -webkit-transform: translateY(150px);
-          transform: translateY(150px);
-  -webkit-animation: come-in 800ms ease forwards;
-          animation: come-in 800ms ease forwards;
-  -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
+	/*  UPDATED! flip the pane when hovered */
+	.flip-container:hover .back {
+		transform: rotateY(0deg);
+	}
+	.flip-container:hover .front {
+	    transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	height: 230px;
 }
 
-@-webkit-keyframes come-in {
-  to { -webkit-transform: translateY(0); }
-  0% { opacity: 0; }
-  1% { opacity: 0; }
-100% { opacity: 1; }
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
 }
-@keyframes come-in {
-  to { transform: translateY(0); }
-  0% { opacity: 0; }
-  1% { opacity: 0; }
-100% { opacity: 1; }
-}*/
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.back h4 {
+  height: 57px;
+  border-bottom: 1px dashed #FFFFFF;
+}
+
+/*  UPDATED! front pane, placed above back */
+.front {
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(-180deg);
+}
+
 
 /*Why Implement*/
 

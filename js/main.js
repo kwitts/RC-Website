@@ -184,7 +184,7 @@ $(document).ready(function() {
   /*funnel*/
   $('.funnelspin').bind('inview', function(event, isInView, visiblePartX, visiblePartY) {
     if (isInView) {
-      $(this).addClass('flip');
+      $(this).addClass('flipper');
       $('.top').addClass('drop');
       $('.bottom1').delay(2600).animate({opacity:'1'},1000);
       $('.bottom2').delay(2800).animate({opacity:'1'},1000);

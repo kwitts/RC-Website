@@ -907,7 +907,7 @@ input {
   -webkit-transition-delay: 500ms;
           transition-delay: 500ms;
 }
-.funnel .funnelspin.flip {
+.funnel .funnelspin.flipper {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }

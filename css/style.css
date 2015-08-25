@@ -601,25 +601,32 @@ input {
 }
 
 /*Top Goals*/
-.topgoals h3, .hp-features h3{
+.topgoals h3{
   padding: 20px 0;
   color: #2b3849;
   font-size: 1.1em;
 }
 
 /*homepage Features*/
+.hp-features a {
+  display: block;
+}
 .hp-features img{
-  width: 100%;
-  margin-bottom: 15px;
+  width: 150px;
 }
 .hp-features .fourth {
-  height: 180px;
+  height: 230px;
   padding: 15px;
   box-sizing: border-box;
 }
 .hp-features .fourth:hover {
   background: #e9e9ea;
   cursor: pointer;
+}
+.hp-features h3{
+  padding: 0;
+  color: #2b3849;
+  font-size: 1.1em;
 }
 
 .goto {

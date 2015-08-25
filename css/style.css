@@ -594,6 +594,7 @@ input {
 .referralmachine {
   background: #2B3849;
   color: #E9E9EA;
+  border-bottom: 0px;
 }
 .referralmachine p {
   font-size: 1.5em;

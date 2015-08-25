@@ -624,7 +624,7 @@ input {
 
 .goto {
   margin-top: -100px;        /* Size of fixed header */
-  padding-bottom: 100px; 
+  padding-bottom: 100px;
   display: block;
 }
 
@@ -681,110 +681,7 @@ input {
   margin: 20px auto;
 }
 
-
-/*Venn Diagram*/
-
-/*.venn {
-  text-align: center !important;
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  margin: 0 auto 30px;
-  overflow: hidden;
-}
-.venn img {
-  max-width: 100%;
-}
-.venn .diagram {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.venn a {
-  display: block;
-  position: absolute;
-  width: 26.33%;
-  height: 12.5%;
-}
-.venn .venn-sec.owned {
-  top: 36.83%;
-  left: 10.5%;
-  background: url('../images/venn-owned-sprites.png') no-repeat;
-  background-size: auto 100%;
-  background-position: 100% 0;
-
-}
-.venn .venn-sec.paid {
-  top: 36.83%;
-  left: 63.16%;
-  background: url('../images/venn-paid-sprites.png') no-repeat;
-  background-size: auto 100%;
-  background-position: 100% 0;
-}
-.venn .venn-sec.earned {
-  top: 71.5%;
-  left: 36.83%;
-  background: url('../images/venn-earned-sprites.png') no-repeat;
-  background-size: auto 100%;
-  background-position: 100% 0;
-}
-.venn .venn-sec.center {
-  height: 26.33%;
-  top: 41.5%;
-  left: 36.83%;
-  background: url('../images/venn-center-sprites.png') no-repeat;
-  background-size: auto 100%;
-  background-position: 100% 0;
-}
-.venn .venn-sec.owned:hover, .venn .venn-sec.paid:hover, .venn .venn-sec.earned:hover, .venn .venn-sec.center:hover  {
-  background-position: 0 0;
-}
-.venn .venn-info-box {
-  display: none;
-  position: absolute;
-  top: 50%;
-  margin-top: -40%;
-  left: 50%;
-  margin-left: -45%;
-  padding: 10px;
-  box-sizing: border-box;
-  background: #e9e9ea;
-  border: 3px solid #2b3849;
-  -webkit-border-radius: 10px;
-          border-radius: 10px;
-  width: 90%;
-  height: auto;
-  z-index: 9999;
-}
-.venn .venn-info-box .close {
-  color: #999999;
-  font-size: 12px;
-  text-decoration: none;
-  margin: 0 auto;
-  display: block;
-  width: auto;
-  height: auto;
-  top: 0px;
-  right: 10px;
-}
-.venn .venn-info-box .close:hover {
-  color: #2b3849;
-}
-.venn .venn-info-box .venn-info {
-  display: none;
-}
-.venn .venn-info-box .overlay{
-  background-color: #ffffff;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
-  opacity: 0.3;
-}
-
+/*animations*/
 .animated {
   -webkit-animation-duration: 4s;
           animation-duration: 4s;
@@ -817,7 +714,7 @@ input {
     animation-timing-function: ease-in-out;
     animation-iteration-count:infinite;
     -webkit-animation-iteration-count:infinite;
-}*/
+}
 
 @-webkit-keyframes shake {
     0%, 100% {-webkit-transform: translateY(0);}

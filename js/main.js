@@ -220,6 +220,11 @@ $(document).ready(function() {
     e.preventDefault();
   });
 
+  $('.flip a').click(function(e) {
+    $(this).closest('.card').toggleClass('flipped');
+    e.preventDefault();
+  })
+
 });
 
 /*-- ANALYTICS PAGE --*/

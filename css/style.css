@@ -463,12 +463,13 @@ input {
   margin: 50px 0 50px;
 }
 .fundamentals .row {
-  margin-bottom: 50px;
+  /*margin-bottom: 50px;*/
   overflow: hidden;
   text-align: center;
 }
 .fundamentals img {
   width: 120px;
+  margin-top: 30px;
 }
 .fundamentals h4 {
   text-align: center;
@@ -482,56 +483,55 @@ input {
   color: #e9e9ea;
 }
 
-/*Not Just Tech*/
-/* entire container, keeps perspective */
-.flip-container {
-	perspective: 1000;
-	transform-style: preserve-3d;
+.flip {
+  -webkit-perspective: 800;
+          perspective: 800;
+  width: auto;
+  height: 300px;
+  margin-bottom: 20px;
+  position: relative;
 }
-	/*  UPDATED! flip the pane when hovered */
-	.flip-container:hover .back {
-		transform: rotateY(0deg);
-	}
-	.flip-container:hover .front {
-	    transform: rotateY(180deg);
-	}
-
-.flip-container, .front, .back {
-	height: 230px;
+.flip .card.flipped {
+  -webkit-transform: rotatey(-180deg);
+          transform: rotatey(-180deg);
 }
-
-/* flip speed goes here */
-.flipper {
-	transition: 0.6s;
-	transform-style: preserve-3d;
-
-	position: relative;
+.flip .card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+          transition: 0.5s;
 }
-
-/* hide back of pane during swap */
-.front, .back {
-	backface-visibility: hidden;
-	transition: 0.6s;
-	transform-style: preserve-3d;
-
-	position: absolute;
-	top: 0;
-	left: 0;
+.flip .card .face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  z-index: 2;
+  text-align: center;
 }
-.back h4 {
+.flip .card .front {
+  position: absolute;
+  z-index: 1;
+}
+.flip .card .back {
+  -webkit-transform: rotatey(-180deg);
+          transform: rotatey(-180deg);
+}
+.flip .card .back h4 {
   height: 57px;
   border-bottom: 1px dashed #FFFFFF;
 }
-
-/*  UPDATED! front pane, placed above back */
-.front {
-	z-index: 2;
-	transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-.back {
-	transform: rotateY(-180deg);
+.flip .card a {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  width: 100%;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 
@@ -601,13 +601,34 @@ input {
 }
 
 /*Top Goals*/
-.topgoals h3{
+.topgoals h3, .hp-features h3{
   padding: 20px 0;
   color: #2b3849;
   font-size: 1.1em;
 }
-/*How Do Marketers...*/
 
+/*homepage Features*/
+.hp-features img{
+  width: 100%;
+  margin-bottom: 15px;
+}
+.hp-features .fourth {
+  height: 180px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.hp-features .fourth:hover {
+  background: #e9e9ea;
+  cursor: pointer;
+}
+
+.goto {
+  margin-top: -100px;        /* Size of fixed header */
+  padding-bottom: 100px;
+  display: block;
+}
+
+/*How Do Marketers...*/
 .marketers section {
   background: #e9e9ea;
   padding: 10px;
@@ -660,110 +681,7 @@ input {
   margin: 20px auto;
 }
 
-
-/*Venn Diagram*/
-
-.venn {
-  text-align: center !important;
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  margin: 0 auto 30px;
-  overflow: hidden;
-}
-.venn img {
-  max-width: 100%;
-}
-.venn .diagram {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.venn a {
-  display: block;
-  position: absolute;
-  width: 26.33%;
-  height: 12.5%;
-}
-.venn .venn-sec.owned {
-  top: 36.83%;
-  left: 10.5%;
-  background: url('../images/venn-owned-sprites.png') no-repeat;
-  background-size: auto 100%;
-  background-position: 100% 0;
-
-}
-.venn .venn-sec.paid {
-  top: 36.83%;
-  left: 63.16%;
-  background: url('../images/venn-paid-sprites.png') no-repeat;
-  background-size: auto 100%;
-  background-position: 100% 0;
-}
-.venn .venn-sec.earned {
-  top: 71.5%;
-  left: 36.83%;
-  background: url('../images/venn-earned-sprites.png') no-repeat;
-  background-size: auto 100%;
-  background-position: 100% 0;
-}
-.venn .venn-sec.center {
-  height: 26.33%;
-  top: 41.5%;
-  left: 36.83%;
-  background: url('../images/venn-center-sprites.png') no-repeat;
-  background-size: auto 100%;
-  background-position: 100% 0;
-}
-.venn .venn-sec.owned:hover, .venn .venn-sec.paid:hover, .venn .venn-sec.earned:hover, .venn .venn-sec.center:hover  {
-  background-position: 0 0;
-}
-.venn .venn-info-box {
-  display: none;
-  position: absolute;
-  top: 50%;
-  margin-top: -40%;
-  left: 50%;
-  margin-left: -45%;
-  padding: 10px;
-  box-sizing: border-box;
-  background: #e9e9ea;
-  border: 3px solid #2b3849;
-  -webkit-border-radius: 10px;
-          border-radius: 10px;
-  width: 90%;
-  height: auto;
-  z-index: 9999;
-}
-.venn .venn-info-box .close {
-  color: #999999;
-  font-size: 12px;
-  text-decoration: none;
-  margin: 0 auto;
-  display: block;
-  width: auto;
-  height: auto;
-  top: 0px;
-  right: 10px;
-}
-.venn .venn-info-box .close:hover {
-  color: #2b3849;
-}
-.venn .venn-info-box .venn-info {
-  display: none;
-}
-.venn .venn-info-box .overlay{
-  background-color: #ffffff;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
-  opacity: 0.3;
-}
-
+/*animations*/
 .animated {
   -webkit-animation-duration: 4s;
           animation-duration: 4s;
@@ -1502,40 +1420,6 @@ input {
   .page-title.analytics h1 {
     font-size: 2.5em;
   }
-  /*.tech .pop-top {
-    width: 60%;
-    padding: 30px 20px;
-  }
-  .tech-scroll .pop:nth-child(odd) {
-    margin-left: 110px;
-  }
-  .tech-scroll .pop:nth-child(odd) img, .tech-scroll .pop:nth-child(odd) div {
-    float: right;
-  }
-  .tech-scroll .pop:nth-child(odd) img{
-    margin-left: 15px;
-    position: relative;
-  }
-  .tech-scroll .pop:nth-child(odd) div {
-    width: 78%;
-  }
-  .tech-scroll .pop:nth-child(even) {
-    margin-right: 110px;
-  }
-  .tech-scroll .pop:nth-child(even) img, .tech-scroll .pop:nth-child(even) div {
-    float: left;
-  }
-  .tech-scroll .pop:nth-child(even) img{
-    margin-right: 15px;
-    position: relative;
-  }
-  .tech-scroll .pop:nth-child(even) div {
-    width: 78%;
-  }
-  .tech-scroll .pop:last-child {
-    margin: 0 auto;
-    text-align: center;
-  }*/
   .modal {
     padding: 20px;
     transform: translate(-50%, -50%);
@@ -1558,6 +1442,7 @@ input {
   }
   .right {
     float: right;
+    text-align: right;
   }
 
 

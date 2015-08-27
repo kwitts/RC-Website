@@ -8,9 +8,9 @@ $(window).load(function() {
 
 /*DEV PURPOSES ONLY*/
 //this shows how far down the page you've scrolled in the console. Uncomment to debug animation transition issues.
-$(document).scroll(function() {
-    console.log($(document).scrollTop());
-})
+// $(document).scroll(function() {
+//     console.log($(document).scrollTop());
+// })
 
 /*--SCROLL ANIMATIONS ON DOC LOAD--*/
 $(document).ready(function() {

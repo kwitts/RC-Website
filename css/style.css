@@ -744,7 +744,6 @@ input {
 /*Insights & Analytics Page*/
 
 .page-title.analytics {
-  /*background: #E9E9Ea;*/
   background: #2b3849;
   padding-bottom: 0;
 }
@@ -906,8 +905,6 @@ input {
           transform: rotate(180deg);
   -webkit-transition: transform 1500ms ease-in-out;
           transition: transform 1500ms ease-in-out;
-  -webkit-transition-delay: 500ms;
-          transition-delay: 500ms;
 }
 .funnel .funnelspin.flipper {
   -webkit-transform: rotate(360deg);
@@ -1340,20 +1337,6 @@ input {
 
   .tech {
     width: 80%;
-  }
-  /*.tech .pop-top img {
-    float: left;
-    margin-right: 20px;
-  }*/
-  .tech .pop-top h1 {
-    line-height: 1.5em;
-  }
-  .venn .venn-info-box {
-    width: 60%;
-    left: 50%;
-    margin-left: -30%;
-    top: 50%;
-    margin-top: -25%;
   }
 
   .socialbar li p {

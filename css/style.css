@@ -684,6 +684,9 @@ input {
   overflow: hidden;
   padding: 30px 0 0;
 }
+.featuredetails ul {
+  text-align: left !important;
+}
 .featuredetails .border {
   border-bottom: 1px solid #d9d9da;
   width: 80%;
@@ -1172,7 +1175,7 @@ input {
    ==================== */
   nav a {
     float: left;
-    width: 21%;
+    width: 16%;
     margin: 0;
     padding: 15px 2%;
     margin-bottom: 0;

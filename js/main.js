@@ -160,8 +160,8 @@ $(document).ready(function() {
     if (isInView) {
       $(this).addClass('flipper');
       $('.top').addClass('drop');
-      $('.bottom1').delay(2600).animate({opacity:'1'},1000);
-      $('.bottom2').delay(2800).animate({opacity:'1'},1000);
+      $('.bottom1').delay(1200).animate({opacity:'1'},1000);
+      $('.bottom2').delay(1400).animate({opacity:'1'},1000);
     } else {
       // element has gone out of viewport
     }

@@ -891,8 +891,8 @@ input {
   left: 0;
   -webkit-transition: opacity 500ms ease-in-out;
           transition: opacity 500ms ease-in-out;
-  -webkit-transition-delay: 2100ms;
-          transition-delay: 2100ms;
+  -webkit-transition-delay: 1000ms;
+          transition-delay: 1000ms;
 }
 .funnel .top.drop {
   opacity: 1;
@@ -903,8 +903,8 @@ input {
   left: 0;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  -webkit-transition: transform 1500ms ease-in-out;
-          transition: transform 1500ms ease-in-out;
+  -webkit-transition: transform 1000ms ease-in-out;
+          transition: transform 1000ms ease-in-out;
 }
 .funnel .funnelspin.flipper {
   -webkit-transform: rotate(360deg);

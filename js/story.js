@@ -172,27 +172,27 @@ $(document).ready(function() {
 
     /* MIKE - Step One */
     if ($(this).scrollTop() > 500) {
-      $('#mike').css('background', 'url("../images/mike_03.png")');
+      $('#mike').css('background', 'url("../images/mike_03-min.png")');
     } else if ($(this).scrollTop() > 320) {
-      $('#mike').css('background', 'url("../images/mike_02.png")');
+      $('#mike').css('background', 'url("../images/mike_02-min.png")');
     } else {
-      $('#mike').css('background', 'url("../images/mike_01.png")');
+      $('#mike').css('background', 'url("../images/mike_01-min.png")');
     }
 
     /* REFERRAL PLANE-STAR - Step Three */
     if ($(this).scrollTop() > 2160) {
-      $('#plane-referral').css('background', 'url("../images/referral_03.png")');
+      $('#plane-referral').css('background', 'url("../images/referral_03-min.png")');
     } else {
-      $('#plane-referral').css('background', 'url("../images/referral_01.png")');
+      $('#plane-referral').css('background', 'url("../images/referral_01-min.png")');
     }
 
     /* SUZIE - Step Three */
     if ($(this).scrollTop() > 2700) {
-      $('#suzie').css('background', 'url("../images/suzie_03.png")');
+      $('#suzie').css('background', 'url("../images/suzie_03-min.png")');
     } else if ($(this).scrollTop() > 2400) {
-      $('#suzie').css('background', 'url("../images/suzie_02.png")');
+      $('#suzie').css('background', 'url("../images/suzie_02-min.png")');
     } else {
-      $('#suzie').css('background', 'url("../images/suzie_01.png")');
+      $('#suzie').css('background', 'url("../images/suzie_01-min.png")');
     }
 
   });

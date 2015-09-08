@@ -320,7 +320,7 @@ input {
   border-bottom: none !important;
 }
 .page-title.home {
-  background: url('../images/topbg.jpg') center center no-repeat;
+  background: url('../images/topbg-min.jpg') center center no-repeat;
 }
 .page-title.home h1 {
   font-size: 1.3em;
@@ -351,7 +351,7 @@ input {
 /*Dark Horse*/
 
 .darkhorse {
-  background: url(../images/darkhorse.png) no-repeat center center;
+  background: url(../images/darkhorse-min.png) no-repeat center center;
   min-height: 410px;
 }
 .chart {
@@ -447,7 +447,7 @@ input {
 /*fundamentals*/
 .fundamentalsbg {
   background: #0079c1;
-  background: url('../images/blueprint.png') no-repeat center center;
+  background: url('../images/blueprint-min.png') no-repeat center center;
   background-size: cover;
   padding-top: 100px;
   border-bottom: 0;
@@ -769,7 +769,7 @@ input {
   display: block;
   width: 100%;
   height: 16.66%;
-  background: url('../images/insights-sprites2.png') no-repeat;
+  background: url('../images/insights-sprites2-min.png') no-repeat;
   background-size: 100% auto;
 }
 .page-title.analytics .insights .insights1 {
@@ -971,7 +971,7 @@ input {
             transform: translateX(0) scale(1);
     -webkit-transition: opacity .3s, background .5s, -webkit-transform 1s;
             transition: opacity .3s, background .5s, transform 1s;
-    background: url('../images/mike_01.png');
+    background: url('../images/mike_01-min.png');
     background-repeat: no-repeat;
     width: 216px;
     height: 375px;
@@ -985,7 +985,7 @@ input {
             transform: translateX(-100px) scale(0.8);
     -webkit-transition: opacity .3s, background .5s, -webkit-transform 1s;
             transition: opacity .3s, background .5s, transform 1s;
-    background: url('../images/onlinepurchase.png');
+    background: url('../images/onlinepurchase-min.png');
     background-repeat: no-repeat;
     opacity: 0;
     width: 420px;
@@ -1004,7 +1004,7 @@ input {
             transform: translateX(150px) scale(0.8);
     -webkit-transition: opacity .3s, background .5s, -webkit-transform 1s;
             transition: opacity .3s, background .5s, transform 1s;
-    background: url('../images/suzie_01.png');
+    background: url('../images/suzie_01-min.png');
     background-repeat: no-repeat;
     width: 216px;
     height: 375px;
@@ -1030,7 +1030,7 @@ input {
             transform: translateX(-150px);
     -webkit-transition: opacity .3s, background .5s, -webkit-transform 1s;
             transition: opacity .3s, background .5s, transform 1s;
-    background: url('../images/referral_01.png');
+    background: url('../images/referral_01-min.png');
     background-repeat: no-repeat;
     width: 100px;
     height: 100px;
@@ -1049,7 +1049,7 @@ input {
             transform: translateX(-150px);
     -webkit-transition: opacity .3s, background .5s, -webkit-transform 1s;
             transition: opacity .3s, background .5s, transform 1s;
-    background: url('../images/referral_01.png');
+    background: url('../images/referral_01-min.png');
     background-repeat: no-repeat;
     width: 100px;
     height: 100px;
@@ -1079,7 +1079,7 @@ input {
             transform: translate(100px, -150px);
     -webkit-transition: opacity .3s, background .5s, -webkit-transform 1s;
             transition: opacity .3s, background .5s, transform 1s;
-    background: url('../images/referral_01.png');
+    background: url('../images/referral_01-min.png');
     background-repeat: no-repeat;
     width: 100px;
     height: 100px;
@@ -1109,7 +1109,7 @@ input {
             transform: translateX(-250px) scale(0.8);
     -webkit-transition: -webkit-transform 1s, scale 1s;
             transition: transform 1s, scale 1s;
-    background: url('../images/mike_03.png');
+    background: url('../images/mike_03-min.png');
     background-repeat: no-repeat;
     width: 216px;
     height: 375px;
@@ -1159,7 +1159,7 @@ input {
   opacity: 0.5;
 }
 .request {
-  background: url(../images/requestbg.png) no-repeat center center;
+  background: url(../images/requestbg-min.png) no-repeat center center;
 }
 
 /* ==========================================================================
@@ -1200,7 +1200,7 @@ input {
     width: 100px;
   }
   .request {
-    background: url(../images/requestbg.png) no-repeat left center;
+    background: url(../images/requestbg-min.png) no-repeat left center;
   }
   .page-title.analytics .insights img {
     width: 100%;

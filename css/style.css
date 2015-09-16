@@ -258,6 +258,9 @@ nav ul {
   border-bottom: #C5C5C5 1px solid;
   padding: 20px 0;
 }
+.halfvh {
+  height: 50vh;
+}
 .dark {
   background: #2B3849;
   border-bottom: 0px;
@@ -284,6 +287,9 @@ input {
   padding: 5px;
   text-align: center;
   box-sizing: border-box;
+}
+.send {
+   margin: 20px auto;
 }
 .r-icon {
   text-align: left;

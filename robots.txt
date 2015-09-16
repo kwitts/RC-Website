@@ -1,0 +1,8 @@
+User-Agent: *
+Disallow: /assets
+Disallow: /js
+Disallow: /css
+Disallow: /images
+Disallow: /emailer.php
+Disallow: /placeholder.php
+Disallow: /thankyou.html
